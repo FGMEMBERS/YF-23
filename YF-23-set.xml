@@ -33,7 +33,6 @@ NR/MD YF23 simulation config.
   </current-view>
 
   <sound>
-   <audible>true</audible>
    <path>Aircraft/YF-23/Sounds/YF-23-sound.xml</path>
   </sound>
 
