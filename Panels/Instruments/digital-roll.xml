@@ -5,7 +5,7 @@
 
 <PropertyList>
 
- <name>Digital Alt display</name>
+ <name>Digital Roll display</name>
  <w-base>40</w-base>
  <h-base>10</h-base>
 
@@ -14,7 +14,7 @@
   <layer>
    <name>background</name>
    <texture>
-    <path>Aircraft/YF-23/Panels/Instruments/Textures/trans-green-bg.rgb</path>
+    <path>Aircraft/YF-23/Panels/Instruments/Textures/trans-yellow-bg.rgb</path>
    </texture>
     <w>124</w>
     <h>20</h>
@@ -35,14 +35,14 @@
    <type>text</type>
    <point-size>18</point-size>
    <color>
-    <red>0.0</red>
-    <green>1.05</green>
+    <red>1.0</red>
+    <green>1.0</green>
     <blue>0.0</blue>
    </color>
    <chunks>
     <chunk>
      <type>literal</type>
-     <text>Alt: </text>
+     <text>Roll: </text>
     </chunk>
    </chunks>
    <transformations>
@@ -58,30 +58,30 @@
   </layer>
 
   <layer>
-   <name>Alt display</name>
+   <name>roll display</name>
    <type>text</type>
    <font>led</font>
    <point-size>7</point-size>
    <color>
-    <red>0.0</red>
+    <red>1.0</red>
     <green>1.0</green>
     <blue>0.0</blue>
    </color>
    <chunks>
     <chunk>
      <type>number-value</type>
-     <property>/position/altitude-ft</property>
-     <format>%05.0f</format>
+     <property>/orientation/roll-deg</property>
+     <format>%02.2f</format>
     </chunk>
    </chunks>
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>50</offset>
+     <offset>60</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>4</offset>
+     <offset>3</offset>
     </transformation>
    </transformations>
   </layer>

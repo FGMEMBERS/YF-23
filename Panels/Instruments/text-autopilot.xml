@@ -56,11 +56,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>-115</offset>
+     <offset>-110</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-10</offset>
+     <offset>-5</offset>
     </transformation>
    </transformations>
   </layer>
@@ -83,11 +83,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>-28</offset>
+     <offset>-23</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-10</offset>
+     <offset>-5</offset>
     </transformation>
    </transformations>
   </layer>
@@ -110,11 +110,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>0</offset>
+     <offset>5</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-10</offset>
+     <offset>-5</offset>
     </transformation>
    </transformations>
   </layer>
@@ -143,11 +143,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>28</offset>
+     <offset>33</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-10</offset>
+     <offset>-5</offset>
     </transformation>
    </transformations>
   </layer>
@@ -176,11 +176,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>28</offset>
+     <offset>33</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-10</offset>
+     <offset>-5</offset>
     </transformation>
    </transformations>
   </layer>
@@ -209,11 +209,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>60</offset>
+     <offset>65</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-10</offset>
+     <offset>-5</offset>
     </transformation>
    </transformations>
   </layer>
@@ -242,11 +242,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>60</offset>
+     <offset>65</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-10</offset>
+     <offset>-5</offset>
     </transformation>
    </transformations>
   </layer>
@@ -276,11 +276,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>84</offset>
+     <offset>89</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-10</offset>
+     <offset>-5</offset>
     </transformation>
    </transformations>
   </layer>
@@ -309,11 +309,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>84</offset>
+     <offset>89</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-10</offset>
+     <offset>-5</offset>
     </transformation>
    </transformations>
   </layer>
@@ -343,11 +343,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>-115</offset>
+     <offset>-110</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-10</offset>
+     <offset>-5</offset>
     </transformation>
    </transformations>
   </layer>
@@ -377,11 +377,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>-28</offset>
+     <offset>-23</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-10</offset>
+     <offset>-5</offset>
     </transformation>
    </transformations>
   </layer>
@@ -411,16 +411,50 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>0</offset>
+     <offset>5</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-10</offset>
+     <offset>-5</offset>
     </transformation>
    </transformations>
   </layer>
 
 <!-- Take Off -->
+<!-- Ground Roll Phase -->
+  <layer>
+   <condition>
+    <equals>
+     <property>/autopilot/locks/altitude</property>
+     <value>ground-roll</value>
+    </equals>
+   </condition>
+   <name>Rotate Engaged</name>
+   <type>text</type>
+   <point-size>16</point-size>
+   <color>
+    <red>1.0</red>
+    <green>1.0</green>
+    <blue>0.0</blue>
+   </color>
+   <chunks>
+    <chunk>
+     <type>literal</type>
+     <text>TO</text>
+    </chunk>
+   </chunks>
+   <transformations>
+    <transformation>
+     <type>x-shift</type>
+     <offset>33</offset>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <offset>-5</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
 <!-- Rotate Phase -->
   <layer>
    <condition>
@@ -446,11 +480,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>28</offset>
+     <offset>33</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-10</offset>
+     <offset>-5</offset>
     </transformation>
    </transformations>
   </layer>
@@ -480,22 +514,122 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>28</offset>
+     <offset>33</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-10</offset>
+     <offset>-5</offset>
     </transformation>
    </transformations>
   </layer>
 
 <!-- Instrument Landing -->
+<!-- Glide Slope Clamp Phases -->
+  <layer>
+    <condition>
+      <equals>
+        <property>/autopilot/locks/altitude</property>
+        <value>gs-vfps-lock1</value>
+      </equals>
+    </condition>
+    <name>Instrument Landing Engaged (Glide Slope Clamp Phase)</name>
+    <type>text</type>
+    <point-size>16</point-size>
+    <color>
+      <red>0.0</red>
+      <green>0.0</green>
+      <blue>1.0</blue>
+    </color>
+    <chunks>
+      <chunk>
+        <type>literal</type>
+        <text>IL</text>
+      </chunk>
+    </chunks>
+    <transformations>
+      <transformation>
+     <type>x-shift</type>
+     <offset>65</offset>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <offset>-5</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
+  <layer>
+    <condition>
+      <equals>
+        <property>/autopilot/locks/altitude</property>
+        <value>gs-vfps-lock2</value>
+      </equals>
+    </condition>
+    <name>Instrument Landing Engaged (Glide Slope Clamp Phase)</name>
+    <type>text</type>
+    <point-size>16</point-size>
+    <color>
+      <red>0.5</red>
+      <green>0.5</green>
+      <blue>1.0</blue>
+    </color>
+    <chunks>
+      <chunk>
+        <type>literal</type>
+        <text>IL</text>
+      </chunk>
+    </chunks>
+    <transformations>
+      <transformation>
+     <type>x-shift</type>
+     <offset>65</offset>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <offset>-5</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
+  <layer>
+    <condition>
+      <equals>
+        <property>/autopilot/locks/altitude</property>
+        <value>gs-vfps-lock3</value>
+      </equals>
+    </condition>
+    <name>Instrument Landing Engaged (Glide Slope Clamp Phase)</name>
+    <type>text</type>
+    <point-size>16</point-size>
+    <color>
+      <red>1.0</red>
+      <green>1.0</green>
+      <blue>0.0</blue>
+    </color>
+    <chunks>
+      <chunk>
+        <type>literal</type>
+        <text>IL</text>
+      </chunk>
+    </chunks>
+    <transformations>
+      <transformation>
+     <type>x-shift</type>
+     <offset>65</offset>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <offset>-5</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
 <!-- Glide Slope Phase -->
   <layer>
    <condition>
     <equals>
      <property>/autopilot/locks/altitude</property>
-     <value>Glide Slope</value>
+     <value>gs1-hold</value>
     </equals>
    </condition>
    <name>Instrument Landing Engaged (Glide Slope Phase)</name>
@@ -515,11 +649,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>60</offset>
+     <offset>65</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-10</offset>
+     <offset>-5</offset>
     </transformation>
    </transformations>
   </layer>
@@ -549,11 +683,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>60</offset>
+     <offset>65</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-10</offset>
+     <offset>-5</offset>
     </transformation>
    </transformations>
   </layer>
@@ -583,11 +717,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>84</offset>
+     <offset>89</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-10</offset>
+     <offset>-5</offset>
     </transformation>
    </transformations>
   </layer>

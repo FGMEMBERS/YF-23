@@ -48,11 +48,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>0</offset>
+     <offset>5</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>0</offset>
+     <offset>5</offset>
     </transformation>
    </transformations>
   </layer>

@@ -40,7 +40,8 @@
   <layer>
    <name>Incr 10 KIAS</name>
    <type>text</type>
-   <point-size>14</point-size>
+   <font>led</font>
+   <point-size>7</point-size>
    <color>
     <red>1.0</red>
     <green>1.0</green>
@@ -55,11 +56,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>-62</offset>
+     <offset>-59</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>6</offset>
+     <offset>7</offset>
     </transformation>
    </transformations>
   </layer>
@@ -67,7 +68,8 @@
   <layer>
    <name>Decr 10 KIAS</name>
    <type>text</type>
-   <point-size>14</point-size>
+   <font>led</font>
+   <point-size>7</point-size>
    <color>
     <red>1.0</red>
     <green>1.0</green>
@@ -82,11 +84,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>-62</offset>
+     <offset>-59</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-4</offset>
+     <offset>-3</offset>
     </transformation>
    </transformations>
   </layer>
@@ -94,7 +96,8 @@
   <layer>
    <name>Incr 1 KIAS</name>
    <type>text</type>
-   <point-size>14</point-size>
+   <font>led</font>
+   <point-size>7</point-size>
    <color>
     <red>0.8</red>
     <green>0.8</green>
@@ -109,11 +112,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>-52</offset>
+     <offset>-49</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>6</offset>
+     <offset>7</offset>
     </transformation>
    </transformations>
   </layer>
@@ -121,7 +124,8 @@
   <layer>
    <name>Decr 1 KIAS</name>
    <type>text</type>
-   <point-size>14</point-size>
+   <font>led</font>
+   <point-size>7</point-size>
    <color>
     <red>0.8</red>
     <green>0.8</green>
@@ -136,11 +140,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>-52</offset>
+     <offset>-49</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-4</offset>
+     <offset>-3</offset>
     </transformation>
    </transformations>
   </layer>
@@ -148,7 +152,8 @@
   <layer>
    <name>Incr 0.1 Mach</name>
    <type>text</type>
-   <point-size>14</point-size>
+   <font>led</font>
+   <point-size>7</point-size>
    <color>
     <red>0</red>
     <green>1.0</green>
@@ -163,11 +168,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>-62</offset>
+     <offset>-59</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-12</offset>
+     <offset>-11</offset>
     </transformation>
    </transformations>
   </layer>
@@ -175,7 +180,8 @@
   <layer>
    <name>Decr 0.1 Mach</name>
    <type>text</type>
-   <point-size>14</point-size>
+   <font>led</font>
+   <point-size>7</point-size>
    <color>
     <red>0</red>
     <green>1.0</green>
@@ -190,11 +196,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>-62</offset>
+     <offset>-59</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-21</offset>
+     <offset>-20</offset>
     </transformation>
    </transformations>
   </layer>
@@ -202,7 +208,8 @@
   <layer>
    <name>Incr 0.01 Mach</name>
    <type>text</type>
-   <point-size>14</point-size>
+   <font>led</font>
+   <point-size>7</point-size>
    <color>
     <red>0</red>
     <green>0.8</green>
@@ -217,11 +224,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>-52</offset>
+     <offset>-49</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-12</offset>
+     <offset>-11</offset>
     </transformation>
    </transformations>
   </layer>
@@ -229,7 +236,8 @@
   <layer>
    <name>Decr 0.01 Mach</name>
    <type>text</type>
-   <point-size>14</point-size>
+   <font>led</font>
+   <point-size>7</point-size>
    <color>
     <red>0</red>
     <green>0.8</green>
@@ -244,11 +252,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>-52</offset>
+     <offset>-49</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-21</offset>
+     <offset>-20</offset>
     </transformation>
    </transformations>
   </layer>
@@ -271,11 +279,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>-42</offset>
+     <offset>-39</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>0</offset>
+     <offset>4</offset>
     </transformation>
    </transformations>
   </layer>
@@ -298,11 +306,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>-42</offset>
+     <offset>-39</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-18</offset>
+     <offset>-15</offset>
     </transformation>
    </transformations>
   </layer>
@@ -331,11 +339,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>-26</offset>
+     <offset>-23</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-10</offset>
+     <offset>-5</offset>
     </transformation>
    </transformations>
   </layer>
@@ -364,11 +372,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>-26</offset>
+     <offset>-23</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-10</offset>
+     <offset>-5</offset>
     </transformation>
    </transformations>
   </layer>

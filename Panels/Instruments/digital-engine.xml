@@ -57,11 +57,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>0</offset>
+     <offset>5</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>0</offset>
+     <offset>5</offset>
     </transformation>
    </transformations>
   </layer>
@@ -113,11 +113,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>65</offset>
+     <offset>70</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>0</offset>
+     <offset>5</offset>
     </transformation>
    </transformations>
   </layer>
@@ -169,11 +169,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>170</offset>
+     <offset>175</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>0</offset>
+     <offset>5</offset>
     </transformation>
    </transformations>
   </layer>
@@ -225,11 +225,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>170</offset>
+     <offset>175</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-20</offset>
+     <offset>-15</offset>
     </transformation>
    </transformations>
   </layer>
@@ -281,11 +281,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>260</offset>
+     <offset>265</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-20</offset>
+     <offset>-15</offset>
     </transformation>
    </transformations>
   </layer>
@@ -337,11 +337,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>65</offset>
+     <offset>70</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>-20</offset>
+     <offset>-15</offset>
     </transformation>
    </transformations>
   </layer>
@@ -393,11 +393,11 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>260</offset>
+     <offset>265</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <offset>0</offset>
+     <offset>5</offset>
     </transformation>
    </transformations>
   </layer>
