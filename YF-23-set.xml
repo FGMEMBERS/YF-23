@@ -11,6 +11,7 @@ NR/MD YF23 simulation config.
  <sim>
   <flight-model>yasim</flight-model>
   <status>beta</status>
+  <author>Lee Elliott</author>
   <aero>YF-23-yasim</aero>
   <fuel-fraction>1.0</fuel-fraction>
 

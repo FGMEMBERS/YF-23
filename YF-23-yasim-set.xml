@@ -11,6 +11,7 @@ NR/MD YF23 simulation config.
  <sim>
   <flight-model>yasim</flight-model>
   <aero>YF-23-yasim</aero>
+  <author>Lee Elliott</author>
   <fuel-fraction>1.0</fuel-fraction>
 
   <description>Northrop/McDonnell Douglas YF-23 ATF prototype</description>
