@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<PropertyList include="YF-23-yasim-set.xml">
+ <sim>
+  <description>Alias for YF-23-yasim.</description>
+ </sim>
+</PropertyList>
