@@ -120,12 +120,18 @@
   </layer>
 
   <layer>
-   <name>Take-Off - Off</name>
+   <condition>
+    <equals>
+     <property>/autopilot/locks/auto-take-off</property>
+     <value>Disabled</value>
+    </equals>
+   </condition>
+   <name>Take-Off - Disabled</name>
    <type>text</type>
    <point-size>16</point-size>
    <color>
     <red>0.0</red>
-    <green>0.9</green>
+    <green>0.3</green>
     <blue>0.0</blue>
    </color>
    <chunks>
@@ -147,12 +153,51 @@
   </layer>
 
   <layer>
-   <name>Instrument Landing - Off</name>
+   <condition>
+    <equals>
+     <property>/autopilot/locks/auto-take-off</property>
+     <value>Enabled</value>
+    </equals>
+   </condition>
+   <name>Take-Off - Enabled</name>
    <type>text</type>
    <point-size>16</point-size>
    <color>
     <red>0.0</red>
-    <green>0.9</green>
+    <green>1.0</green>
+    <blue>0.0</blue>
+   </color>
+   <chunks>
+    <chunk>
+     <type>literal</type>
+     <text>TO</text>
+    </chunk>
+   </chunks>
+   <transformations>
+    <transformation>
+     <type>x-shift</type>
+     <offset>28</offset>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <offset>-10</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
+  <layer>
+   <condition>
+    <equals>
+     <property>/autopilot/locks/auto-landing</property>
+     <value>Disabled</value>
+    </equals>
+   </condition>
+   <name>Instrument Landing - Disabled</name>
+   <type>text</type>
+   <point-size>16</point-size>
+   <color>
+    <red>0.0</red>
+    <green>0.3</green>
     <blue>0.0</blue>
    </color>
    <chunks>
@@ -176,11 +221,78 @@
   <layer>
    <condition>
     <equals>
+     <property>/autopilot/locks/auto-landing</property>
+     <value>Enabled</value>
+    </equals>
+   </condition>
+   <name>Instrument Landing - Enabled</name>
+   <type>text</type>
+   <point-size>16</point-size>
+   <color>
+    <red>0.0</red>
+    <green>1.0</green>
+    <blue>0.0</blue>
+   </color>
+   <chunks>
+    <chunk>
+     <type>literal</type>
+     <text>IL</text>
+    </chunk>
+   </chunks>
+   <transformations>
+    <transformation>
+     <type>x-shift</type>
+     <offset>60</offset>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <offset>-10</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
+<!-- Mach Climb -->
+  <layer>
+   <condition>
+    <not-equals>
+     <property>/autopilot/locks/speed</property>
+     <value>mach-with-throttle</value>
+    </not-equals>
+   </condition>
+   <name>Mach Climb Disabled</name>
+   <type>text</type>
+   <point-size>16</point-size>
+   <color>
+    <red>0.0</red>
+    <green>0.3</green>
+    <blue>0.0</blue>
+   </color>
+   <chunks>
+    <chunk>
+     <type>literal</type>
+     <text>MC</text>
+    </chunk>
+   </chunks>
+   <transformations>
+    <transformation>
+     <type>x-shift</type>
+     <offset>84</offset>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <offset>-10</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
+  <layer>
+   <condition>
+    <equals>
      <property>/autopilot/locks/speed</property>
      <value>mach-with-throttle</value>
     </equals>
    </condition>
-   <name>Mach Climb - Off</name>
+   <name>Mach Climb - Enabled</name>
    <type>text</type>
    <point-size>16</point-size>
    <color>
@@ -309,40 +421,6 @@
   </layer>
 
 <!-- Take Off -->
-<!-- Roll Phase -->
-  <layer>
-   <condition>
-    <equals>
-     <property>/autopilot/locks/altitude</property>
-     <value>ground-roll</value>
-    </equals>
-   </condition>
-   <name>Take Off Roll Engaged</name>
-   <type>text</type>
-   <point-size>16</point-size>
-   <color>
-    <red>1.0</red>
-    <green>0.5</green>
-    <blue>0.0</blue>
-   </color>
-   <chunks>
-    <chunk>
-     <type>literal</type>
-     <text>TO</text>
-    </chunk>
-   </chunks>
-   <transformations>
-    <transformation>
-     <type>x-shift</type>
-     <offset>28</offset>
-    </transformation>
-    <transformation>
-     <type>y-shift</type>
-     <offset>-10</offset>
-    </transformation>
-   </transformations>
-  </layer>
-
 <!-- Rotate Phase -->
   <layer>
    <condition>
@@ -377,26 +455,26 @@
    </transformations>
   </layer>
 
-<!-- Pitch Hold Phase -->
+<!-- Climb Out Phase -->
   <layer>
    <condition>
     <equals>
      <property>/autopilot/locks/altitude</property>
-     <value>pitch-hold</value>
+     <value>climb-out</value>
     </equals>
    </condition>
-   <name>Pitch-Hold Engaged</name>
+   <name>Climb Out Engaged</name>
    <type>text</type>
    <point-size>16</point-size>
    <color>
     <red>1.0</red>
-    <green>1.0</green>
+    <green>0.5</green>
     <blue>0.0</blue>
    </color>
    <chunks>
     <chunk>
      <type>literal</type>
-     <text>PH</text>
+     <text>TO</text>
     </chunk>
    </chunks>
    <transformations>
@@ -480,7 +558,7 @@
    </transformations>
   </layer>
 
-<!-- Mach Climb Enabled -->
+<!-- Mach Climb Engaged -->
   <layer>
    <condition>
     <equals>
@@ -488,7 +566,7 @@
      <value>mach-climb</value>
     </equals>
    </condition>
-   <name>Mach Climb - On</name>
+   <name>Mach Climb - Engaged</name>
    <type>text</type>
    <point-size>16</point-size>
    <color>
@@ -529,7 +607,17 @@
    <binding>
     <command>property-assign</command>
     <property alias="../../../../params/ah-select"/>
-    <value type="string">Off</value>
+    <value type="string"></value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>/autopilot/locks/auto-take-off</property>
+    <value type="string">Enabled</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>/autopilot/locks/auto-landing</property>
+    <value type="string">Disabled</value>
    </binding>
   </action>
 
@@ -545,6 +633,11 @@
     <command>property-assign</command>
     <property alias="../../../../params/ah-select"/>
     <value type="string">altitude-hold</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>/autopilot/locks/auto-landing</property>
+    <value type="string">Enabled</value>
    </binding>
   </action>
 
@@ -573,7 +666,7 @@
    <h>18</h>
    <binding>
     <command>nasal</command>
-    <script>YF23.takeoff()</script>
+    <script>YF23.autotakeoff()</script>
    </binding>
   </action>
 
@@ -587,7 +680,7 @@
    <h>18</h>
    <binding>
      <command>nasal</command>
-     <script>YF23.checkagl()</script>
+     <script>YF23.autoland()</script>
    </binding>
   </action>
 

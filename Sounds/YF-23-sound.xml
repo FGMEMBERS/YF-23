@@ -9,7 +9,7 @@ The samples called are copies of the A-4 samples.
 
   <engine>
    <name>engine</name>
-   <path>Aircraft/YF-23/Sounds/Samples/jet.wav</path>
+   <path>Sounds/jet.wav</path>
    <mode>looped</mode>
    <property>/engines/engine[0]/running</property>
    <volume>
@@ -21,7 +21,7 @@ The samples called are copies of the A-4 samples.
 
   <engine>
    <name>engine</name>
-   <path>Aircraft/YF-23/Sounds/Samples/jet.wav</path>
+   <path>Sounds/jet.wav</path>
    <mode>looped</mode>
    <property>/engines/engine[1]/running</property>
    <volume>
@@ -33,7 +33,7 @@ The samples called are copies of the A-4 samples.
 
   <engine>
    <name>whine</name>
-   <path>Aircraft/YF-23/Sounds/Samples/whine.wav</path>
+   <path>Sounds/whine.wav</path>
    <mode>looped</mode>
    <property>/engines/engine[0]/running</property>
    <pitch>
@@ -50,7 +50,7 @@ The samples called are copies of the A-4 samples.
 
   <engine>
    <name>whine</name>
-   <path>Aircraft/YF-23/Sounds/Samples/whine.wav</path>
+   <path>Sounds/whine.wav</path>
    <mode>looped</mode>
    <property>/engines/engine[1]/running</property>
    <pitch>
@@ -68,7 +68,7 @@ The samples called are copies of the A-4 samples.
   <rumble>
    <name>rumble</name>
    <mode>looped</mode>
-   <path>Aircraft/YF-23/Sounds/Samples/rumble.wav</path>
+   <path>Sounds/rumble.wav</path>
    <condition>
     <or>
      <property>/gear/gear[0]/wow</property>
@@ -86,7 +86,7 @@ The samples called are copies of the A-4 samples.
   <gear>
    <name>gear</name>
    <mode>in-transit</mode>
-   <path>Aircraft/YF-23/Sounds/Samples/gear.wav</path>
+   <path>Sounds/gear.wav</path>
    <property>/gear/gear[0]/position-norm</property>
    <pitch>
     <internal>dt_play</internal>
@@ -97,7 +97,7 @@ The samples called are copies of the A-4 samples.
 
   <gear>
    <name>gear-lock</name>
-   <path>Aircraft/YF-23/Sounds/Samples/gear-lck.wav</path>
+   <path>Sounds/gear-lck.wav</path>
    <condition>
     <equals>
      <property>/gear/gear[0]/position-norm</property>
@@ -109,7 +109,7 @@ The samples called are copies of the A-4 samples.
   <gear>
    <name>gear</name>
    <mode>in-transit</mode>
-   <path>Aircraft/YF-23/Sounds/Samples/gear.wav</path>
+   <path>Sounds/gear.wav</path>
    <property>/gear/gear[1]/position-norm</property>
    <pitch>
     <internal>dt_play</internal>
@@ -120,7 +120,7 @@ The samples called are copies of the A-4 samples.
 
   <gear>
    <name>gear-lock</name>
-   <path>Aircraft/YF-23/Sounds/Samples/gear-lck.wav</path>
+   <path>Sounds/gear-lck.wav</path>
    <condition>
     <equals>
      <property>/gear/gear[1]/position-norm</property>
@@ -132,7 +132,7 @@ The samples called are copies of the A-4 samples.
   <gear>
    <name>gear</name>
    <mode>in-transit</mode>
-   <path>Aircraft/YF-23/Sounds/Samples/gear.wav</path>
+   <path>Sounds/gear.wav</path>
    <property>/gear/gear[2]/position-norm</property>
    <pitch>
     <internal>dt_play</internal>
@@ -143,7 +143,7 @@ The samples called are copies of the A-4 samples.
 
   <gear>
    <name>gear-lock</name>
-   <path>Aircraft/YF-23/Sounds/Samples/gear-lck.wav</path>
+   <path>Sounds/gear-lck.wav</path>
    <condition>
     <equals>
      <property>/gear/gear[2]/position-norm</property>
@@ -154,7 +154,7 @@ The samples called are copies of the A-4 samples.
 
   <squeal>
    <name>squeal</name>
-   <path>Aircraft/YF-23/Sounds/Samples/squeal.wav</path>
+   <path>Sounds/squeal.wav</path>
    <condition>
     <or>
      <property>/gear/gear[0]/wow</property>
@@ -185,7 +185,7 @@ The samples called are copies of the A-4 samples.
   <flap>
    <name>flaps</name>
    <mode>in-transit</mode>
-   <path>Aircraft/YF-23/Sounds/Samples/flaps.wav</path>
+   <path>Sounds/flaps.wav</path>
    <property>/surface-positions/left-flap-pos-norm</property>
    <volume>
     <offset>0.25</offset>
@@ -205,7 +205,7 @@ The samples called are copies of the A-4 samples.
   <slat>
    <name>slats</name>
    <mode>in-transit</mode>
-   <path>Aircraft/YF-23/Sounds/Samples/flaps.wav</path>
+   <path>Sounds/flaps.wav</path>
    <property>/surface-positions/left-slat-pos-norm</property>
    <volume>
     <offset>0.25</offset>
@@ -225,7 +225,7 @@ The samples called are copies of the A-4 samples.
   <wind>
    <name>wind</name>
    <mode>looped</mode>
-   <path>Aircraft/YF-23/Sounds/Samples/wind.wav</path>
+   <path>Sounds/wind.wav</path>
    <property>/velocities/airspeed-kt</property>
    <volume>
     <property>/position/altitude-ft</property>
@@ -249,7 +249,7 @@ The samples called are copies of the A-4 samples.
 
   <stall>
    <name>stall</name>
-   <path>Aircraft/YF-23/Sounds/Samples/stall.wav</path>
+   <path>Sounds/stall.wav</path>
    <property>/sim/alarms/stall-warning</property>
    <volume>
     <property>/velocities/airspeed-kt</property>

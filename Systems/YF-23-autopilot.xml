@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
 
 <!--
-	Autopilot Configuration for the YF-23.
-	Based upon the generic FG Autopilot.
+    Autopilot Configuration for the YF-23.
+    Based upon the generic FG Autopilot.
 -->
 
 <!--
-	This is still in development, so not all of the controllers are
-	currently used, or work properly.
+    This is still in development, so not all of the controllers are
+    currently used, or work properly.
 -->
 
 <PropertyList>
 
 <!--
-	===============
-	Roll Axis Modes
-	===============
+    ===============
+    Roll Axis Modes
+    ===============
 -->
 
 <!-- Wing leveler -->
@@ -49,9 +49,9 @@
   </pid-controller>
 
 <!--
-	Heading Bug Hold.  2 stage cascade controller.
-	Stage #1 sets target roll based on diff between current heading
-	and heading bug.
+    Heading Bug Hold.  2 stage cascade controller.
+    Stage #1 sets target roll based on diff between current heading
+    and heading bug.
 -->
   <pid-controller>
     <name>Heading Bug Hold (DG based) Stage 1</name>
@@ -113,9 +113,9 @@
   </pid-controller>
 
 <!--
-	True Heading hold.  2 stage cascade controller.
-	Stage #1 sets target roll based on diff between current heading
-	and target heading.
+        True Heading hold.  2 stage cascade controller.
+        Stage #1 sets target roll based on diff between current heading
+        and target heading.
 -->
   <pid-controller>
     <name>True Heading Hold (DG based) Stage 1</name>
@@ -134,12 +134,12 @@
       <prop>/autopilot/internal/target-roll-deg</prop>
     </output>
     <config>
-      <Kp>-8.0</Kp>        <!-- proportional gain -->
+      <Kp>-9.0</Kp>        <!-- proportional gain -->
       <beta>1.0</beta>     <!-- input value weighing factor -->
       <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>   <!-- input value weighing factor for -->
                            <!-- unfiltered derivative error -->
-      <Ti>4.0</Ti>        <!-- integrator time -->
+      <Ti>8.0</Ti>        <!-- integrator time -->
       <Td>0.0001</Td>     <!-- derivator time -->
       <u_min>-50.0</u_min> <!-- minimum output clamp -->
       <u_max>50.0</u_max>  <!-- maximum output clamp -->
@@ -177,8 +177,8 @@
   </pid-controller>
 
 <!--
-	Nav1 hold.  2 stage cascade controller.
-	Stage #1 sets target roll based on nav1-heading-error-deg.
+        Nav1 hold.  2 stage cascade controller.
+        Stage #1 sets target roll based on nav1-heading-error-deg.
 -->
   <pid-controller>
     <name>Nav1 Hold Stage 1</name>
@@ -240,13 +240,13 @@
   </pid-controller>
 
 
- <!--
-	================
-	Pitch Axis Modes
-	================
+<!--
+    ================
+    Pitch Axis Modes
+    ================
 -->
 
- <!-- Simple pitch hold -->
+<!-- Simple pitch hold -->
  <pid-controller>
     <name>Pitch hold</name>
     <debug>false</debug>
@@ -276,7 +276,7 @@
     </config>
    </pid-controller>
 
- <!-- Simple angle of attack hold -->
+<!-- Simple angle of attack hold -->
  <pid-controller>
     <name>AOA hold</name>
     <debug>false</debug>
@@ -307,9 +307,9 @@
   </pid-controller>
 
 <!--
-	Altitude hold.  2 stage cascade controller.
-	Stage #1 sets target rate of climb based on diff between current alt
-	and target altitude.
+    Altitude hold.  2 stage cascade controller.
+    Stage #1 sets target rate of climb based on diff between current alt
+    and target altitude.
 -->
   <pid-controller>
     <name>Altitude Hold (Altimeter based) Stage 1</name>
@@ -328,13 +328,13 @@
       <prop>/autopilot/internal/target-climb-rate-fps</prop>
     </output>
     <config>
-      <Kp>0.1</Kp>        <!-- proportional gain -->
+      <Kp>0.08</Kp>        <!-- proportional gain -->
       <beta>1.0</beta>    <!-- input value weighing factor -->
       <alpha>0.01</alpha>  <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>  <!-- input value weighing factor for -->
                           <!-- unfiltered derivative error -->
       <Ti>30.0</Ti>     <!-- integrator time -->
-      <Td>0.000001</Td>    <!-- derivator time -->
+      <Td>0.00001</Td>    <!-- derivator time -->
       <u_min>-160.0</u_min> <!-- minimum output clamp -->
       <u_max>160.0</u_max> <!-- maximum output clamp -->
     </config>
@@ -371,9 +371,9 @@
   </pid-controller>
 
 <!--
-	AGL hold.  2 stage cascade controller.
-	Stage #1 sets target rate of climb based on diff between current agl
-	and target agl.
+    AGL hold.  2 stage cascade controller.
+    Stage #1 sets target rate of climb based on diff between current agl
+    and target agl.
 -->
   <pid-controller>
     <name>AGL Hold (Altimeter based) Stage 1</name>
@@ -392,12 +392,12 @@
       <prop>/autopilot/internal/target-climb-rate-fps</prop>
     </output>
     <config>
-      <Kp>0.4</Kp>        <!-- proportional gain -->
+      <Kp>0.2</Kp>        <!-- proportional gain -->
       <beta>1.0</beta>    <!-- input value weighing factor -->
       <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>  <!-- input value weighing factor for -->
                           <!-- unfiltered derivative error -->
-      <Ti>3.0</Ti>    <!-- integrator time -->
+      <Ti>10.0</Ti>    <!-- integrator time -->
       <Td>0.00001</Td>    <!-- derivator time -->
       <u_min>-50.0</u_min> <!-- minimum output clamp -->
       <u_max>350.0</u_max> <!-- maximum output clamp -->
@@ -464,10 +464,10 @@
     </config>
   </pid-controller>
 
- <!--
-	==============
-	Velocity Modes
-	==============
+<!--
+    ==============
+    Velocity Modes
+    ==============
 -->
 
 <!-- Simple Auto throttle -->
@@ -561,9 +561,9 @@
   </pid-controller>
 
 <!--
-	==================
-	Custom Controllers
-	==================
+        ==================
+        Custom Controllers
+        ==================
 -->
 
 <!-- Modified pitch hold for take-offs -->
@@ -628,10 +628,10 @@
   </pid-controller>
 
 <!--
-	Mach Climb Hold.
-	Two stage controller based on modified Altitude hold.
-	Stage #1 sets target rate of climb based on diff between
-	current mach and target mach.
+        Mach Climb Hold.
+        Two stage controller based on modified Altitude hold.
+        Stage #1 sets target rate of climb based on diff between
+        current mach and target mach.
 -->
   <pid-controller>
     <name>Mach Lock Climb Stage 1</name>
@@ -693,9 +693,9 @@
   </pid-controller>
 
 <!--
-	Modified AGL hold for autopilot landing - 2 stage cascade controller.
-	Stage #1 sets target rate of climb based on diff between current agl
-	and target (zero) agl
+        Modified AGL hold for autopilot landing - 2 stage cascade controller.
+        Stage #1 sets target rate of climb based on diff between current agl
+        and target (zero) agl
 -->
   <pid-controller>
     <name>Auto Landing Stage 1</name>
@@ -714,15 +714,15 @@
       <prop>/autopilot/internal/target-climb-rate-fps</prop>
     </output>
     <config>
-      <Kp>0.1</Kp>        <!-- proportional gain -->
+      <Kp>0.16</Kp>        <!-- proportional gain -->
       <beta>1.0</beta>    <!-- input value weighing factor -->
       <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>  <!-- input value weighing factor for -->
                           <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>    <!-- integrator time -->
+      <Ti>12.0</Ti>    <!-- integrator time -->
       <Td>0.00001</Td>    <!-- derivator time -->
       <u_min>-12.0</u_min> <!-- minimum output clamp -->
-      <u_max>-0.10</u_max> <!-- maximum output clamp -->
+      <u_max>-0.01</u_max> <!-- maximum output clamp -->
     </config>
   </pid-controller>
 
@@ -761,8 +761,8 @@
     <name>Ground Roll Rudder hold</name>
     <debug>false</debug>
     <enable>
-      <prop>/autopilot/locks/heading</prop>
-      <value>ground-roll</value>
+      <prop>/autopilot/locks/rudder-control</prop>
+      <value>rudder-hold</value>
     </enable>
     <input>
       <prop>/orientation/heading-deg</prop>
@@ -791,8 +791,8 @@
     <name>AoA-by-speed Hold</name>
     <debug>false</debug>
     <enable>
-      <prop>/autopilot/locks/speed</prop>
-      <value>AoA-by-speed</value>
+      <prop>/autopilot/locks/approach-AoA-lock</prop>
+      <value>Engaged</value>
     </enable>
     <input>
       <prop>/orientation/alpha-deg</prop>
@@ -801,19 +801,18 @@
       <prop>/autopilot/settings/target-approach-AoA-deg</prop>
     </reference>
     <output>
-      <prop>/controls/engines/engine[0]/throttle</prop>
-      <prop>/controls/engines/engine[1]/throttle</prop>
+      <prop>/autopilot/settings/target-speed-kt</prop>
     </output>
     <config>
-      <Kp>-0.06</Kp>      <!-- proportional gain -->
+      <Kp>-2.0</Kp>      <!-- proportional gain -->
       <beta>1.0</beta>    <!-- input value weighing factor -->
       <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>  <!-- input value weighing factor for -->
                           <!-- unfiltered derivative error -->
-      <Ti>40.0</Ti>        <!-- integrator time -->
-      <Td>0.00000001</Td>    <!-- derivator time -->
-      <u_min>-1.0</u_min> <!-- minimum output clamp -->
-      <u_max>1.0</u_max>  <!-- maximum output clamp -->
+      <Ti>16.0</Ti>        <!-- integrator time -->
+      <Td>0.00001</Td>    <!-- derivator time -->
+      <u_min>100.0</u_min> <!-- minimum output clamp -->
+      <u_max>150.0</u_max>  <!-- maximum output clamp -->
     </config>
    </pid-controller>
 

@@ -454,6 +454,20 @@ Hacked by Lee Elliott for the YF-23 mock panel
    <h>20</h>
   </instrument>
 
+  <instrument include="Instruments/digital-ap-speed-kt.xml">
+   <name>AP Speed-Kt Instruiment</name>
+   <params>
+    <kias-disp>/autopilot/settings/target-speed-kt</kias-disp>
+    <kias-ctrl>/autopilot/settings/target-speed-kt</kias-ctrl>
+    <mach-disp>/autopilot/settings/target-mach</mach-disp>
+    <mach-ctrl>/autopilot/settings/target-mach</mach-ctrl>
+   </params>
+   <x>828</x>
+   <y>120</y>
+   <w>124</w>
+   <h>40</h>
+  </instrument>
+
 </instruments>
 
 </PropertyList>

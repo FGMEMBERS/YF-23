@@ -14,7 +14,7 @@
 
 <!-- Approach configuration -->
 <!-- From GW & photos -->
- <approach speed="100" aoa="9">
+ <approach speed="110" aoa="9">
   <control-setting axis="/controls/engines/engine[0]/throttle" value="0.7"/>
   <control-setting axis="/controls/engines/engine[1]/throttle" value="0.7"/>
   <control-setting axis="/controls/engines/engine[0]/afterburner" value="0"/>
@@ -29,7 +29,7 @@
      'super-cruise' i.e. exceed the speed of sound in level fligh
      without reheat, so I've just added a little extra to take it
      just above the speed of sound -->
- <cruise speed="800" alt="0">
+ <cruise speed="800" alt="10000">
   <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
   <control-setting axis="/controls/engines/engine[1]/throttle" value="1.0"/>
   <control-setting axis="/controls/engines/engine[0]/afterburner" value="0"/>
@@ -60,28 +60,28 @@
           width="1.2" taper="0" midpoint="0.3"/>
 
 <!-- Lots of guesswork here -->
-<!--
  <wing x="-2.00" y="0.00" z="0.25" length="6.66" chord="12.00" taper="0.08"
        sweep="0" dihedral="0" camber="0.001" incidence="0.0" idrag="1.6">
   <stall aoa="22" width="3" peak="1.3"/>
   <flap0 start="0.36" end="0.63" lift="1.5" drag="1.5"/>
   <flap1 start="0.63" end="0.89" lift="1.4" drag="1.5"/>
-  <slat start="0.36" end="0.89" aoa="6" drag="1.3"/>
--->
+  <slat start="0.36" end="0.89" aoa="6" lift="1.3" drag="1.3"/>
+
 <!-- Shortened wing that starts outboard of the engine intakes -->
+<!--
  <wing x="-2.00" y="2.40" z="0.25" length="4.2" chord="8.1" taper="0.19"
        sweep="0" dihedral="0" camber="0.001" incidence="0.0" idrag="1.6">
   <stall aoa="22" width="3" peak="1.3"/>
   <flap0 start="0.0" end="0.42" lift="1.5" drag="1.5"/>
   <flap1 start="0.42" end="0.833" lift="1.4" drag="1.5"/>
   <slat start="0.0" end="0.833" aoa="6" drag="1.3"/>
-
+-->
   <control-input axis="/controls/flight/flaps" control="FLAP0"/>
   <control-input axis="/controls/flight/aileron"
-                                                           src0="-1" src1="1" dst0="-0.2" dst1="0.2"
+                 src0="-1" src1="1" dst0="-0.2" dst1="0.2"
                  control="FLAP1" split="true"/>
   <control-input axis="/controls/flight/aileron-trim"
-                                                           src0="-1" src1="1" dst0="-0.2" dst1="0.2"
+                 rc0="-1" src1="1" dst0="-0.2" dst1="0.2"
                  control="FLAP1" split="true"/>
 
   <control-input axis="/controls/flight/slats" control="SLAT"/>
@@ -89,7 +89,7 @@
   <control-input axis="/controls/flight/rudder" src0="-1" src1="1" dst0="-0.1" dst1="0.1" control="FLAP1" split="true" invert="true"/>
 
   <control-input axis="/controls/flight/spoilers"
-                                                           src0="-1" src1="1" dst0="-0.3" dst1="0.3"
+                 src0="-1" src1="1" dst0="-0.3" dst1="0.3"
                  control="FLAP0"/>
   <control-input axis="/controls/flight/spoilers" control="FLAP1" invert="true"/>
 
@@ -165,9 +165,9 @@
  </gear>
 
 <!-- Canopy -->
- <gear x="4.1" y="0.0" z="1.05" retract-time="7" compression="0.6">
+ <gear x="4.1" y="0.0" z="1.05" retract-time="4" compression="0.6">
   <control-input axis="/controls/gear/brake-parking" control="EXTEND"/>
-  <control-speed control="EXTEND" transition-time="10"/>
+  <control-speed control="EXTEND" transition-time="4"/>
   <control-output control="EXTEND" prop="/canopy/position-norm"/>
  </gear>
 
@@ -189,6 +189,6 @@
  <ballast x="5.8" y="0" z="0.6" mass="200"/>
 
 <!-- Trim ballast -->
- <ballast x="6" y="0" z="0.0" mass="2000"/>
+ <ballast x="6" y="0" z="0.0" mass="1000"/>
 
 </airplane>
