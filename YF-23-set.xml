@@ -10,6 +10,7 @@ NR/MD YF23 simulation config.
 <PropertyList>
  <sim>
   <flight-model>yasim</flight-model>
+  <status>beta</status>
   <aero>YF-23-yasim</aero>
   <fuel-fraction>1.0</fuel-fraction>
 
