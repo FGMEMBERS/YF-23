@@ -131,7 +131,7 @@
     <input>Alternator 1</input>
     <output>Master Bus</output>
     <switch>
-      <prop>/controls/switches/master-alt</prop>
+      <prop>/controls/engines/engine[0]/master-alt</prop>
     </switch>
   </connector>
 
@@ -144,7 +144,7 @@
     <input>Battery 1</input>
     <output>Master Bus</output>
     <switch>
-      <prop>/controls/switches/master-bat</prop>
+      <prop>/controls/engines/engine[0]/master-bat</prop>
     </switch>
   </connector>
 
