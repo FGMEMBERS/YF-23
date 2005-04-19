@@ -76,6 +76,18 @@ NR/MD YF23 simulation config.
    <setting>1.00</setting>
   </flaps>
 
+  <help>
+   <title>YF-23</title>
+   <key>
+    <name>d/f</name>
+    <desc>retract/extend slats</desc>
+   </key>
+   <key>
+    <name>j/k</name>
+    <desc>decrease/increase spoilers</desc>
+   </key>
+  </help>
+
  </sim>
 
  <input>
