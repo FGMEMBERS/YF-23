@@ -391,7 +391,7 @@
    <condition>
     <equals>
      <property>/autopilot/locks/altitude</property>
-     <value>terrain-follow</value>
+     <value>agl-hold</value>
     </equals>
    </condition>
    <name>Terain Follow Engaged</name>
@@ -786,7 +786,7 @@
    <binding>
     <command>property-assign</command>
     <property alias="../../../../params/tf-select"/>
-    <value type="string">terrain-follow</value>
+    <value type="string">agl-hold</value>
    </binding>
   </action>
 
