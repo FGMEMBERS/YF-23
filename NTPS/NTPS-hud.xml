@@ -72,9 +72,13 @@
 
  <label>
   <name>Heading</name>
-  <width>14</width>
-  <height>3</height>
-  <x>-7</x>
+  <width>18</width>
+  <height>10</height>
+  <option>top</option>
+  <marker-offset>6</marker-offset>
+  <halign>center</halign>
+  <valign>center</valign>
+  <x>-9</x>
   <y>165</y>
   <halign>left</halign>
   <format>%3.0f</format>
@@ -117,10 +121,13 @@
  <label>
   <name>Altitude</name>
   <width>24</width>
-  <height>3</height>
+  <height>10</height>
   <x>212</x>
-  <y>-3</y>
+  <y>-5</y>
+  <option>left</option>
+  <marker-offset>8</marker-offset>
   <halign>left</halign>
+  <valign>center</valign>
   <format>%.0f0</format>
   <box>true</box>
   <input>
@@ -161,11 +168,14 @@
 
  <label>
   <name>Speed</name>
-  <width>18</width>
-  <height>3</height>
+  <width>20</width>
+  <height>10</height>
   <x>-210</x>
-  <y>-3</y>
-  <halign>left</halign>
+  <y>-5</y>
+  <option>right</option>
+  <marker-offset>8</marker-offset>
+  <halign>right</halign>
+  <valign>center</valign>
   <format>%.0f</format>
   <box>true</box>
   <input>
