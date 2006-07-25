@@ -126,6 +126,7 @@
   <y>-5</y>
   <option>left</option>
   <pointer-width>10</pointer-width>
+  <pointer-length>9</pointer-length>
   <halign>left</halign>
   <format>%.0f0</format>
   <box>true</box>
@@ -173,6 +174,7 @@
   <y>-5</y>
   <option>right</option>
   <pointer-width>10</pointer-width>
+  <pointer-length>9</pointer-length>
   <halign>right</halign>
   <format>%.0f</format>
   <box>true</box>
