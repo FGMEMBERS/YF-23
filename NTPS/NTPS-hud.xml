@@ -5,6 +5,8 @@
 <PropertyList>
  <name>NTPS Default Aircraft Hud</name>
 
+ <enable3d>true</enable3d>
+
  <ladder>
   <name>Pitch Ladder</name>
   <type>pitch</type>
@@ -75,12 +77,10 @@
   <width>18</width>
   <height>10</height>
   <option>top</option>
-  <marker-offset>6</marker-offset>
+  <pointer-width>7</pointer-width>
   <halign>center</halign>
-  <valign>center</valign>
   <x>-9</x>
   <y>165</y>
-  <halign>left</halign>
   <format>%3.0f</format>
   <box>true</box>
   <input>
@@ -125,9 +125,8 @@
   <x>212</x>
   <y>-5</y>
   <option>left</option>
-  <marker-offset>8</marker-offset>
+  <pointer-width>10</pointer-width>
   <halign>left</halign>
-  <valign>center</valign>
   <format>%.0f0</format>
   <box>true</box>
   <input>
@@ -173,9 +172,8 @@
   <x>-210</x>
   <y>-5</y>
   <option>right</option>
-  <marker-offset>8</marker-offset>
+  <pointer-width>10</pointer-width>
   <halign>right</halign>
-  <valign>center</valign>
   <format>%.0f</format>
   <box>true</box>
   <input>
