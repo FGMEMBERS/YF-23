@@ -47,7 +47,7 @@ NR/MD YF23 simulation config.
 
   <hud>
    <path n="1">Huds/NTPS.xml</path>
-   <visibility>true</visibility>
+   <visibility n="1">true</visibility>
    <color>
     <transparent type="bool">true</transparent>
     <antialiased type="bool">true</antialiased>
