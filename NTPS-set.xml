@@ -46,7 +46,7 @@ NR/MD YF23 simulation config.
   </panel_2>
 
   <hud>
-   <path n="1">Aircraft/YF-23/NTPS/NTPS-hud.xml</path>
+   <path n="1">Huds/Custom/NTPS-hud.xml</path>
    <visibility>true</visibility>
    <color>
     <transparent type="bool">true</transparent>
