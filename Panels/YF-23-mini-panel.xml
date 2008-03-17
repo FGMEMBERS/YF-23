@@ -1,71 +1,44 @@
 <?xml version="1.0"?>
 
 <!--
-Cessna 310 "mini" panel.
-October 2000
-John Check <j4strngs@rockfish.net>
-_______________________________________________________________________
-
-This is a panel configuration file for the open-source flight
-simulator FlightGear (www.flightgear.org).  The file is an XML-encoded
-FlightGear property list defining the panel's background texture and
-the location (and optionally, size) of the instruments that will
-appear on the panel.
-
-Each instrument is, itself, defined in an XML-encoded property list
-in a separate file.
-
-Co-ordinates are relative to the *bottom* left corner of the screen
-(as in OpenGL).  The total FlightGear window is always considered to
-be 1024x768, whatever its actual display size on the screen.  All
-paths are relative to $FG_ROOT.
-
-Note that the name of the element defining each instrument must be
-different, or else instrument definitions will be overwritten:
-that's not particularly XML-ish, but that's how property lists
-work in FlightGear right now.
-
-Each instrument has its own preferred width and height, but you can
-override those by providing <w>..</w> and <h>..</h> properties with the
-<x>...</x> and <y>...</y> properties.
-
-Hacked by Lee Elliott for the YF-23 mock panel
+    YF-23 mini panel
 -->
 
 <!DOCTYPE PropertyList SYSTEM "panel.dtd">
 
 <PropertyList>
 
- <name>YF-23 mock Mini Panel</name>
- <background>Aircraft/YF-23/Panels/Textures/panel-trans-mini-bg.rgb</background>
- <w>1024</w>
- <h>145</h>
- <y-offset>0</y-offset>
- <view-height>768</view-height>
+  <name>yf-23 Mini Panel</name>
+  <background>Aircraft/YF-23/Panels/Textures/panel-trans-mini-bg.rgb</background>
+  <w>1024</w>
+  <h>145</h>
+  <y-offset>0</y-offset>
+  <view-height>768</view-height>
 
- <instruments>
+  <instruments>
 
 <!-- controls cluster -->
 <!-- Throttles -->
-
-  <instrument include="Instruments/single-throttle-quadrant.xml">
+  <instrument include="Instruments/throttle-quadrant.xml">
    <name>Throttle quadrant</name>
    <params>
-    <engine-throttle-select>/controls/engines/engine[0]/throttle</engine-throttle-select>
+    <engine-throttle-control>/autopilot/FCS/targets/engines/engine[0]/target-throttle-norm</engine-throttle-control>
+    <engine-throttle-display>/engines/engine[0]/throttle-norm</engine-throttle-display>
    </params>
-   <x>474</x>
-   <y>33</y>
+   <x>220</x>
+   <y>31</y>
    <w>12</w>
    <h>60</h>
   </instrument>
 
-  <instrument include="Instruments/single-throttle-quadrant.xml">
+  <instrument include="Instruments/throttle-quadrant.xml">
    <name>Throttle quadrant</name>
    <params>
-    <engine-throttle-select>/controls/engines/engine[1]/throttle</engine-throttle-select>
+    <engine-throttle-control>/autopilot/FCS/targets/engines/engine[1]/target-throttle-norm</engine-throttle-control>
+    <engine-throttle-display>/engines/engine[1]/throttle-norm</engine-throttle-display>
    </params>
-   <x>488</x>
-   <y>33</y>
+   <x>234</x>
+   <y>31</y>
    <w>12</w>
    <h>60</h>
   </instrument>
@@ -74,246 +47,327 @@ Hacked by Lee Elliott for the YF-23 mock panel
   <instrument include="Instruments/flap-quadrant.xml">
    <name>Single Step Flap quadrant</name>
    <params>
-    <flaps-select>/controls/flight/flaps</flaps-select>
+    <flaps-select>/autopilot/FCS/targets/target-flap-norm</flaps-select>
    </params>
-   <x>512</x>
-   <y>33</y>
+   <x>258</x>
+   <y>31</y>
    <w>24</w>
    <h>60</h>
   </instrument>
 
 <!-- Reheat controls -->
-  <instrument include="Instruments/single-reheat-quadrant.xml">
+  <instrument include="Instruments/reheat-quadrant.xml">
    <name>Engine 0 reheat quadrant</name>
    <params>
-    <engine-reheat-select>/controls/engines/engine[0]/afterburner</engine-reheat-select>
+    <engine-reheat-control>/autopilot/FCS/targets/engines/engine[0]/target-reheat-norm</engine-reheat-control>
+    <engine-reheat-display>/engines/engine[0]/reheat-norm</engine-reheat-display>
    </params>
-   <x>536</x>
-   <y>33</y>
+   <x>282</x>
+   <y>31</y>
    <w>12</w>
    <h>60</h>
   </instrument>
 
-  <instrument include="Instruments/single-reheat-quadrant.xml">
+  <instrument include="Instruments/reheat-quadrant.xml">
    <name>Engine 1 reheat quadrant</name>
    <params>
-    <engine-reheat-select>/controls/engines/engine[1]/afterburner</engine-reheat-select>
+    <engine-reheat-control>/autopilot/FCS/targets/engines/engine[1]/target-reheat-norm</engine-reheat-control>
+    <engine-reheat-display>/engines/engine[1]/reheat-norm</engine-reheat-display>
    </params>
-   <x>550</x>
-   <y>33</y>
+   <x>296</x>
+   <y>31</y>
    <w>12</w>
    <h>60</h>
   </instrument>
 
 <!--  end  controls cluster -->
 
-<!-- controls visual feedback cluster -->
+<!-- Traditional instruments -->
+    <instrument include="../../Instruments/hsi.xml">
+      <name>Horizontal Situation Indicator</name>
+      <x>34</x>
+      <y>108</y>
+      <w>65</w>
+      <h>65</h>
+    </instrument>
 
+    <instrument include="Instruments/attitude-indicator.xml">
+      <name>Attitude Gyro</name>
+      <x>34</x>
+      <y>46</y>
+      <w>65</w>
+      <h>65</h>
+    </instrument>
 
-  <instrument include="../../Instruments/brakes.xml">
-   <name>Brake Indicator Light</name>
-   <x>230</x>
-   <y>115</y>
-   <w>32</w>
-   <h>15</h>
-  </instrument>
+    <instrument include="../../Instruments/turn.xml">
+      <name>Turn Coordinator</name>
+      <x>98</x>
+      <y>108</y>
+      <w>65</w>
+      <h>65</h>
+    </instrument>
 
-  <instrument include="../../Instruments/gear-indicator.xml">
-   <name>Gear Indicator Light</name>
-   <x>265</x>
-   <y>115</y>
-   <w>32</w>
-   <h>14</h>
-  </instrument>
+    <instrument include="../../Instruments/aoa-indexer.xml">
+      <name>AoAI</name>
+      <x>145</x>
+      <y>75</y>
+      <w>15</w>
+      <h>65</h>
+    </instrument>
 
-  <instrument include="../../Instruments/controls.xml">
-   <name>Control Position Indicators</name>
-   <x>250</x>
-   <y>60</y>
-   <w>90</w>
-   <h>90</h>
-  </instrument>
+    <instrument include="../../Instruments/brakes.xml">
+      <name>Brake Indicator Light</name>
+      <x>150</x>
+      <y>130</y>
+      <w>32</w>
+      <h>15</h>
+    </instrument>
 
-<!-- end controls visual feedback cluster -->
+    <instrument include="../../Instruments/gear-indicator.xml">
+      <name>Gear Indicator Light</name>
+      <x>185</x>
+      <y>130</y>
+      <w>32</w>
+      <h>14</h>
+    </instrument>
 
-  <instrument include="Instruments/attitude-indicator.xml">
-   <name>Attitude Gyro</name>
-   <x>105</x>
-   <y>100</y>
-   <w>65</w>
-   <h>65</h>
-  </instrument>
-
-  <instrument include="../../Instruments/turn.xml">
-   <name>Turn Coordinator</name>
-   <x>170</x>
-   <y>100</y>
-   <w>65</w>
-   <h>65</h>
-  </instrument>
-
-  <instrument include="../../Instruments/hsi.xml">
-   <name>Horizontal Situation Indicator</name>
-   <x>40</x>
-   <y>100</y>
-   <w>65</w>
-   <h>65</h>
-  </instrument>
-
-  <instrument include="../../Instruments/aoa-indexer.xml">
-   <name>AoAI</name>
-   <x>225</x>
-   <y>60</y>
-   <w>15</w>
-   <h>65</h>
-  </instrument>
+    <instrument include="Instruments/controls.xml">
+      <name>Control Position Indicators</name>
+      <x>168</x>
+      <y>75</y>
+      <w>90</w>
+      <h>90</h>
+    </instrument>
 
 <!-- Digital instruments -->
-
-  <instrument include="Instruments/digital-alt.xml">
-   <name>Altitude display</name>
-   <x>640</x>
-   <y>115</y>
-   <w>40</w>
-   <h>10</h>
-  </instrument>
-
-  <instrument include="Instruments/digital-vsi.xml">
-   <name>Vsi display</name>
-   <x>768</x>
-   <y>115</y>
-   <w>40</w>
-   <h>10</h>
-  </instrument>
-
-  <instrument include="Instruments/digital-agl.xml">
-   <name>Elevation AGL display</name>
-   <x>896</x>
-   <y>115</y>
-   <w>40</w>
-   <h>10</h>
-  </instrument>
-
-  <instrument include="Instruments/digital-kias.xml">
-   <name>KIAS display</name>
-   <x>640</x>
-   <y>92</y>
-   <w>40</w>
-   <h>10</h>
-  </instrument>
-
-  <instrument include="Instruments/digital-mach.xml">
-   <name>Mach display</name>
-   <x>768</x>
-   <y>92</y>
-   <w>40</w>
-   <h>10</h>
-  </instrument>
-
-  <instrument include="Instruments/digital-accl.xml">
-   <name>Accel display</name>
-   <x>896</x>
-   <y>92</y>
-   <w>40</w>
-   <h>10</h>
-  </instrument>
-
-  <instrument include="Instruments/digital-wgt.xml">
-   <name>Weight display</name>
-   <x>300</x>
-   <y>115</y>
-   <w>40</w>
-   <h>10</h>
-  </instrument>
-
-  <instrument include="Instruments/digital-fuel-tot.xml">
-   <name>Fuel tot display</name>
-   <x>300</x>
-   <y>92</y>
-   <w>40</w>
-   <h>10</h>
-  </instrument>
-
-  <instrument include="Instruments/digital-aoa.xml">
-   <name>AoA display</name>
-   <x>300</x>
-   <y>69</y>
-   <w>40</w>
-   <h>10</h>
+  <instrument include="Instruments/digital-wind-speed-direction.xml">
+   <name>Wind display</name>
+   <x>270</x>
+   <y>122</y>
+   <w>120</w>
+   <h>34</h>
   </instrument>
 
   <instrument include="Instruments/digital-ap-speed-kt.xml">
    <name>AP Speed-Kt Instruiment</name>
    <params>
-    <kias-disp>/autopilot/settings/target-speed-kt</kias-disp>
-    <kias-ctrl>/autopilot/settings/target-speed-kt</kias-ctrl>
-    <mach-disp>/autopilot/settings/target-mach</mach-disp>
-    <mach-ctrl>/autopilot/settings/target-mach</mach-ctrl>
+    <spd-disp>/autopilot/settings/target-speed-kt</spd-disp>
+    <spd-ctrl>/autopilot/settings/target-speed-kt</spd-ctrl>
    </params>
-   <x>362</x>
-   <y>46</y>
-   <w>124</w>
+   <x>270</x>
+   <y>84</y>
+   <w>120</w>
    <h>40</h>
   </instrument>
 
-  <instrument include="Instruments/digital-flap.xml">
-   <name>Flap setting display</name>
-   <x>300</x>
-   <y>3</y>
-   <w>40</w>
-   <h>10</h>
+<!-- Right Column 1 -->
+  <instrument include="Instruments/digital-alt.xml">
+    <name>Altitude display</name>
+    <x>766</x>
+    <y>130</y>
+    <w>100</w>
+    <h>16</h>
+  </instrument>
+
+  <instrument include="Instruments/digital-agl.xml">
+    <name>Elevation AGL display</name>
+    <x>766</x>
+    <y>113</y>
+    <w>100</w>
+    <h>16</h>
+  </instrument>
+
+  <instrument include="Instruments/digital-vsi.xml">
+    <name>Vsi display</name>
+    <x>766</x>
+    <y>96</y>
+    <w>100</w>
+    <h>16</h>
+  </instrument>
+
+  <instrument include="Instruments/digital-accl.xml">
+    <name>Accel display</name>
+    <x>766</x>
+    <y>79</y>
+    <w>100</w>
+    <h>16</h>
+  </instrument>
+
+<!-- Right Column 2 -->
+  <instrument include="Instruments/digital-kias.xml">
+    <name>KIAS display</name>
+    <x>868</x>
+    <y>130</y>
+    <w>100</w>
+    <h>16</h>
+  </instrument>
+
+  <instrument include="Instruments/digital-mach.xml">
+    <name>Mach display</name>
+    <x>868</x>
+    <y>113</y>
+    <w>100</w>
+    <h>16</h>
+  </instrument>
+
+  <instrument include="Instruments/digital-wgt.xml">
+    <name>Weight display</name>
+    <x>868</x>
+    <y>96</y>
+    <w>100</w>
+    <h>16</h>
+  </instrument>
+
+  <instrument include="Instruments/digital-fuel-tot.xml">
+    <name>Fuel tot display</name>
+    <x>868</x>
+    <y>79</y>
+    <w>100</w>
+    <h>16</h>
+  </instrument>
+
+<!-- Right Column 3 -->
+  <instrument include="Instruments/digital-roll.xml">
+    <name>Roll display</name>
+    <x>970</x>
+    <y>130</y>
+    <w>100</w>
+    <h>16</h>
+  </instrument>
+
+  <instrument include="Instruments/digital-pitch.xml">
+    <name>Pitch display</name>
+    <x>970</x>
+    <y>113</y>
+    <w>100</w>
+    <h>16</h>
+  </instrument>
+
+  <instrument include="Instruments/digital-aoa.xml">
+   <name>AoA display</name>
+   <x>970</x>
+   <y>96</y>
+   <w>100</w>
+   <h>16</h>
+  </instrument>
+
+  <instrument include="Instruments/digital-yaw.xml">
+   <name>Yaw display</name>
+   <x>970</x>
+   <y>79</y>
+   <w>100</w>
+   <h>16</h>
   </instrument>
 
 <!-- Engine monitors -->
   <instrument include="Instruments/digital-engine.xml">
-   <name>Engine 0 display</name>
-   <params>
-    <eng-num>/engines/engine[0]/engine-num</eng-num>
-    <pt-select>/engines/engine[0]/prop-thrust</pt-select>
-    <pt-select>/engines/engine[0]/prop-thrust</pt-select>
-    <n1-select>/engines/engine[0]/n1</n1-select>
-    <n2-select>/engines/engine[0]/n2</n2-select>
-    <ff-select>/engines/engine[0]/fuel-flow-gph</ff-select>
-    <th-select>/controls/engines/engine[0]/throttle</th-select>
-    <egt-select>/engines/engine[0]/egt-degf</egt-select>
-   </params>
-   <x>640</x>
-   <y>69</y>
-   <w>40</w>
-   <h>10</h>
+    <name>Engine 0 display</name>
+    <params>
+      <eng-num>/engines/engine[0]/engine-num</eng-num>
+      <pt-select>/engines/engine[0]/prop-thrust</pt-select>
+      <pt-select>/engines/engine[0]/prop-thrust</pt-select>
+      <n1-select>/engines/engine[0]/n1</n1-select>
+      <n2-select>/engines/engine[0]/n2</n2-select>
+      <ff-select>/engines/engine[0]/fuel-flow-gph</ff-select>
+      <th-select>/engines/engine[0]/throttle-norm</th-select>
+      <rh-select>/engines/engine[0]/reheat-norm</rh-select>
+      <egt-select>/engines/engine[0]/egt-degf</egt-select>
+    </params>
+    <x>850</x>
+    <y>54</y>
+    <w>340</w>
+    <h>32</h>
   </instrument>
 
   <instrument include="Instruments/digital-engine.xml">
-   <name>Engine 1 display</name>
-   <params>
-    <eng-num>/engines/engine[1]/engine-num</eng-num>
-    <pt-select>/engines/engine[1]/prop-thrust</pt-select>
-    <pt-select>/engines/engine[1]/prop-thrust</pt-select>
-    <n1-select>/engines/engine[1]/n1</n1-select>
-    <n2-select>/engines/engine[1]/n2</n2-select>
-    <ff-select>/engines/engine[1]/fuel-flow-gph</ff-select>
-    <th-select>/controls/engines/engine[1]/throttle</th-select>
-    <egt-select>/engines/engine[1]/egt-degf</egt-select>
-   </params>
-   <x>640</x>
-   <y>26</y>
-   <w>40</w>
-   <h>10</h>
+    <name>Engine 1 display</name>
+    <params>
+      <eng-num>/engines/engine[1]/engine-num</eng-num>
+      <pt-select>/engines/engine[1]/prop-thrust</pt-select>
+      <pt-select>/engines/engine[1]/prop-thrust</pt-select>
+      <n1-select>/engines/engine[1]/n1</n1-select>
+      <n2-select>/engines/engine[1]/n2</n2-select>
+      <ff-select>/engines/engine[1]/fuel-flow-gph</ff-select>
+      <th-select>/engines/engine[1]/throttle-norm</th-select>
+      <rh-select>/engines/engine[1]/reheat-norm</rh-select>
+      <egt-select>/engines/engine[1]/egt-degf</egt-select>
+    </params>
+    <x>850</x>
+    <y>20</y>
+    <w>340</w>
+    <h>32</h>
   </instrument>
 
-<!-- Text AP Block -->
-  <instrument include="Instruments/text-autopilot.xml">
-   <name>AP display</name>
+<!-- APFC Block -->
+  <instrument include="Instruments/APFCS.xml">
+   <name>AP/FCS Instrument</name>
    <params>
     <ah-select>autopilot/locks/altitude</ah-select>
     <tf-select>autopilot/locks/altitude</tf-select>
-    <mc-select>autopilot/locks/altitude</mc-select>
+    <to-select>autopilot/locks/altitude</to-select>
+    <gs-select>autopilot/locks/altitude</gs-select>
    </params>
-   <x>530</x>
-   <y>125</y>
-   <w>200</w>
-   <h>20</h>
+   <x>505</x>
+   <y>70</y>
+   <w>340</w>
+   <h>130</h>
   </instrument>
+
+    <instrument include="Instruments/AP-pitch-roll-controller-monitor.xml">
+      <name>FCS pitch and roll controller monitor display</name>
+      <condition>
+        <equals>
+          <property>autopilot/FCS/locks/pitch</property>
+          <value>true</value>
+        </equals>
+      </condition>
+      <x>992</x>
+      <y>458</y>
+      <w>56</w>
+      <h>84</h>
+    </instrument>
+
+    <instrument include="Instruments/AP-climb-controller-monitor.xml">
+      <name>FCS climb controller monitor display</name>
+      <condition>
+        <equals>
+          <property>autopilot/FCS/locks/vfps</property>
+          <value>true</value>
+        </equals>
+      </condition>
+      <x>992</x>
+      <y>372</y>
+      <w>56</w>
+      <h>84</h>
+    </instrument>
+
+    <instrument include="Instruments/AP-AGL-monitor.xml">
+      <name>Ap AGL monitor display</name>
+      <condition>
+        <equals>
+          <property>autopilot/locks/altitude</property>
+          <value>agl-hold</value>
+        </equals>
+      </condition>
+      <x>992</x>
+      <y>286</y>
+      <w>56</w>
+      <h>84</h>
+    </instrument>
+
+    <instrument include="Instruments/AP-tfa-targets-monitor.xml">
+      <name>Ap TFA targets monitor display</name>
+      <condition>
+        <equals>
+          <property>autopilot/locks/altitude</property>
+          <value>agl-hold</value>
+        </equals>
+      </condition>
+      <x>924</x>
+      <y>194</y>
+      <w>192</w>
+      <h>96</h>
+    </instrument>
 
 </instruments>
 

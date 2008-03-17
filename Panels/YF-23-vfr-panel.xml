@@ -1,35 +1,7 @@
 <?xml version="1.0"?>
 
 <!--
-Cessna 310 panel.
-November 2001
-John Check <j4strngs@rockfish.net>
-_______________________________________________________________________
-
-This is a panel configuration file for the open-source flight
-simulator FlightGear (www.flightgear.org).  The file is an XML-encoded
-FlightGear property list defining the panel's background texture and
-the location (and optionally, size) of the instruments that will
-appear on the panel.
-
-Each instrument is, itself, defined in an XML-encoded property list
-in a separate file.
-
-Co-ordinates are relative to the *bottom* left corner of the screen
-(as in OpenGL).  The total FlightGear window is always considered to
-be 1024x768, whatever its actual display size on the screen.  All
-paths are relative to $FG_ROOT.
-
-Note that the name of the element defining each instrument must be
-different, or else instrument definitions will be overwritten:
-that's not particularly XML-ish, but that's how property lists
-work in FlightGear right now.
-
-Each instrument has its own preferred width and height, but you can
-override those by providing <w>..</w> and <h>..</h> properties with the
-<x>...</x> and <y>...</y> properties.
-
-Hacked by Lee Elliott for the YF-23 mock panel
+    YF-23 vfr panel
 -->
 
 <!DOCTYPE PropertyList SYSTEM "panel.dtd">
@@ -86,7 +58,6 @@ Hacked by Lee Elliott for the YF-23 mock panel
   </instrument>
 
 <!-- controls visual feedback cluster -->
-
   <instrument include="../../Instruments/gear-indicator.xml">
    <name>Gear Indicator Light</name>
    <x>320</x>
@@ -115,7 +86,6 @@ Hacked by Lee Elliott for the YF-23 mock panel
 
 
 <!-- radio nav instruments  -->
-
   <instrument include="../../Instruments/nav1.xml">
    <name>VOR 2 Gauge</name>
    <params>
@@ -134,7 +104,6 @@ Hacked by Lee Elliott for the YF-23 mock panel
   </instrument>
 
 <!-- end radio nav instruments -->
-
   <instrument include="../../Instruments/gyro.xml">
    <name>Directional Gauge</name>
    <x>100</x>
@@ -144,7 +113,6 @@ Hacked by Lee Elliott for the YF-23 mock panel
   </instrument>
 
 <!-- radio stack -->
-
   <instrument include="../../Instruments/markerbeacon.xml">
    <name>Marker Beacon Indicators</name>
    <x>798</x>
@@ -186,8 +154,7 @@ Hacked by Lee Elliott for the YF-23 mock panel
   </instrument>
 
 <!-- end radio stack -->
-
-  <instrument include="Instruments/single-throttle-quadrant.xml">
+  <instrument include="Instruments/throttle-quadrant.xml">
    <name>Engine 0 throttle quadrant</name>
    <params>
     <engine-throttle-select>/controls/engines/engine[0]/throttle</engine-throttle-select>
@@ -198,7 +165,7 @@ Hacked by Lee Elliott for the YF-23 mock panel
    <h>80</h>
   </instrument>
 
-  <instrument include="Instruments/single-throttle-quadrant.xml">
+  <instrument include="Instruments/throttle-quadrant.xml">
    <name>Engine 1 throttle quadrant</name>
    <params>
     <engine-throttle-select>/controls/engines/engine[1]/throttle</engine-throttle-select>
@@ -220,10 +187,10 @@ Hacked by Lee Elliott for the YF-23 mock panel
    <h>80</h>
   </instrument>
 
-  <instrument include="Instruments/single-reheat-quadrant.xml">
+  <instrument include="Instruments/reheat-quadrant.xml">
    <name>Engine 0 reheat quadrant</name>
    <params>
-    <engine-reheat-select>/controls/engines/engine[0]/afterburner</engine-reheat-select>
+    <engine-reheat-select>/controls/engines/engine[0]/reheat</engine-reheat-select>
    </params>
    <x>720</x>
    <y>44</y>
@@ -231,10 +198,10 @@ Hacked by Lee Elliott for the YF-23 mock panel
    <h>80</h>
   </instrument>
 
-  <instrument include="Instruments/single-reheat-quadrant.xml">
+  <instrument include="Instruments/reheat-quadrant.xml">
    <name>Engine 1 reheat quadrant</name>
    <params>
-    <engine-reheat-select>/controls/engines/engine[1]/afterburner</engine-reheat-select>
+    <engine-reheat-select>/controls/engines/engine[1]/reheat</engine-reheat-select>
    </params>
    <x>740</x>
    <y>44</y>
@@ -254,217 +221,6 @@ Hacked by Lee Elliott for the YF-23 mock panel
    <y>250</y>
    <w>40</w>
    <h>70</h>
-  </instrument>
-
-<!-- Engine monitors -->
-  <instrument include="Instruments/digital-engine.xml">
-   <name>Engine 0 display</name>
-   <params>
-    <eng-num>/engines/engine[0]/engine-num</eng-num>
-    <pt-select>/engines/engine[0]/prop-thrust</pt-select>
-    <pt-select>/engines/engine[0]/prop-thrust</pt-select>
-    <n1-select>/engines/engine[0]/n1</n1-select>
-    <n2-select>/engines/engine[0]/n2</n2-select>
-    <ff-select>/engines/engine[0]/fuel-flow-gph</ff-select>
-    <th-select>/controls/engines/engine[0]/throttle</th-select>
-    <egt-select>/engines/engine[0]/egt-degf</egt-select>
-   </params>
-   <x>370</x>
-   <y>260</y>
-   <w>40</w>
-   <h>10</h>
-  </instrument>
-
-  <instrument include="Instruments/digital-engine.xml">
-   <name>Engine 1 display</name>
-   <params>
-    <eng-num>/engines/engine[1]/engine-num</eng-num>
-    <pt-select>/engines/engine[1]/prop-thrust</pt-select>
-    <pt-select>/engines/engine[1]/prop-thrust</pt-select>
-    <n1-select>/engines/engine[1]/n1</n1-select>
-    <n2-select>/engines/engine[1]/n2</n2-select>
-    <ff-select>/engines/engine[1]/fuel-flow-gph</ff-select>
-    <th-select>/controls/engines/engine[1]/throttle</th-select>
-    <egt-select>/engines/engine[1]/egt-degf</egt-select>
-   </params>
-   <x>370</x>
-   <y>217</y>
-   <w>40</w>
-   <h>10</h>
-  </instrument>
-
-<!-- Fuel monitors -->
-  <instrument include="Instruments/digital-fuel-tank.xml">
-   <name>Tank 0 display</name>
-   <params>
-    <tank-num>/consumables/fuel/tank[0]/tank-num</tank-num>
-    <gal-select>/consumables/fuel/tank[0]/level-gal_us</gal-select>
-    <lbs-select>/consumables/fuel/tank[0]/level-lbs</lbs-select>
-   </params>
-   <x>370</x>
-   <y>174</y>
-   <w>40</w>
-   <h>10</h>
-  </instrument>
-
-  <instrument include="Instruments/digital-fuel-tank.xml">
-   <name>Tank 1 display</name>
-   <params>
-    <tank-num>/consumables/fuel/tank[1]/tank-num</tank-num>
-    <gal-select>/consumables/fuel/tank[1]/level-gal_us</gal-select>
-    <lbs-select>/consumables/fuel/tank[1]/level-lbs</lbs-select>
-   </params>
-   <x>370</x>
-   <y>131</y>
-   <w>40</w>
-   <h>10</h>
-  </instrument>
-
-  <instrument include="Instruments/digital-fuel-tank.xml">
-   <name>Tank 2 display</name>
-   <params>
-    <tank-num>/consumables/fuel/tank[2]/tank-num</tank-num>
-    <gal-select>/consumables/fuel/tank[2]/level-gal_us</gal-select>
-    <lbs-select>/consumables/fuel/tank[2]/level-lbs</lbs-select>
-   </params>
-   <x>370</x>
-   <y>88</y>
-   <w>40</w>
-   <h>10</h>
-  </instrument>
-
-  <instrument include="Instruments/digital-fuel-tot.xml">
-   <name>Fuel tot display</name>
-   <x>370</x>
-   <y>43</y>
-   <w>45</w>
-   <h>11</h>
-  </instrument>
-
-  <instrument include="Instruments/digital-reheat.xml">
-   <name>Eng 0 Reheat monitor display</name>
-   <params>
-    <eng-num>/engines/engine[0]/engine-num</eng-num>
-    <rht-select>/controls/engines/engine[0]/afterburner</rht-select>
-   </params>
-   <x>570</x>
-   <y>174</y>
-   <w>40</w>
-   <h>10</h>
-  </instrument>
-
-  <instrument include="Instruments/digital-reheat.xml">
-   <name>Eng 1 Reheat monitor display</name>
-   <params>
-    <eng-num>/engines/engine[1]/engine-num</eng-num>
-    <rht-select>/controls/engines/engine[1]/afterburner</rht-select>
-   </params>
-   <x>570</x>
-   <y>131</y>
-   <w>40</w>
-   <h>10</h>
-  </instrument>
-
-   <instrument include="Instruments/digital-alt.xml">
-   <name>Altitude display</name>
-   <x>370</x>
-   <y>415</y>
-   <w>40</w>
-   <h>10</h>
-  </instrument>
-
-  <instrument include="Instruments/digital-vsi.xml">
-   <name>Vsi display</name>
-   <x>370</x>
-   <y>369</y>
-   <w>40</w>
-   <h>10</h>
-  </instrument>
-
-  <instrument include="Instruments/digital-agl.xml">
-   <name>Elevation AGL display</name>
-   <x>370</x>
-   <y>392</y>
-   <w>40</w>
-   <h>10</h>
-  </instrument>
-
-  <instrument include="Instruments/digital-kias.xml">
-   <name>KIAS display</name>
-   <x>498</x>
-   <y>415</y>
-   <w>40</w>
-   <h>10</h>
-  </instrument>
-
-  <instrument include="Instruments/digital-mach.xml">
-   <name>Mach display</name>
-   <x>498</x>
-   <y>392</y>
-   <w>40</w>
-   <h>10</h>
-  </instrument>
-
-  <instrument include="Instruments/digital-accl.xml">
-   <name>Accel display</name>
-   <x>498</x>
-   <y>369</y>
-   <w>40</w>
-   <h>10</h>
-  </instrument>
-
-  <instrument include="Instruments/digital-wgt.xml">
-   <name>Weight display</name>
-   <x>370</x>
-   <y>346</y>
-   <w>40</w>
-   <h>10</h>
-  </instrument>
-
-  <instrument include="Instruments/digital-aoa.xml">
-   <name>AoA display</name>
-   <x>498</x>
-   <y>346</y>
-   <w>40</w>
-   <h>10</h>
-  </instrument>
-
-  <instrument include="Instruments/digital-flap.xml">
-   <name>Flap settings display</name>
-   <x>370</x>
-   <y>323</y>
-   <w>40</w>
-   <h>10</h>
-  </instrument>
-
-<!-- AP Instruments -->
-<!-- Text AP Block -->
-  <instrument include="Instruments/text-autopilot.xml">
-   <name>AP display</name>
-   <params>
-    <ah-select>autopilot/locks/altitude</ah-select>
-    <tf-select>autopilot/locks/altitude</tf-select>
-    <to-select>autopilot/locks/altitude</to-select>
-    <gs-select>autopilot/locks/altitude</gs-select>
-   </params>
-   <x>865</x>
-   <y>155</y>
-   <w>200</w>
-   <h>20</h>
-  </instrument>
-
-  <instrument include="Instruments/digital-ap-speed-kt.xml">
-   <name>AP Speed-Kt Instruiment</name>
-   <params>
-    <kias-disp>/autopilot/settings/target-speed-kt</kias-disp>
-    <kias-ctrl>/autopilot/settings/target-speed-kt</kias-ctrl>
-    <mach-disp>/autopilot/settings/target-mach</mach-disp>
-    <mach-ctrl>/autopilot/settings/target-mach</mach-ctrl>
-   </params>
-   <x>828</x>
-   <y>120</y>
-   <w>124</w>
-   <h>40</h>
   </instrument>
 
 </instruments>

@@ -1,40 +1,14 @@
 <?xml version="1.0"?>
 
-<!--
-Throttle qquadrant.
-
-December 2001 by John Check, j4strngs@rockfish.net
-
-This is an instrument configuration file for the open-source flight
-simulator FlightGear (www.flightgear.org).  The file is an XML-encoded
-FlightGear property list defining the instrument's layers and actions.
-
-Each instrument is composed of layers stacked on top of each other.
-A layer may be a texture (with transparent parts to show the layers
-underneath), text, or a special layer that switches between two
-others (say, to turn an indicator light on or off).  Each layer can
-move independently in proportion to a property value, and text
-can be generated from property values as well: all of the layer's
-movements are defined as transformations.
-
-Actions are hotspots on the instrument that will respond to a mouse
-click.  Actions always modify the values of properties, either by
-adjusting them, toggling them, or swaping them with other
-properties' values.
-
-Hacked to create a single reheat quadrant.
-
-2003/02/03 Lee Elliott
--->
-
 <PropertyList>
 
- <name>reheat quadrant</name>
+ <name>throttle quadrant</name>
  <w-base>22</w-base>
  <h-base>80</h-base>
 
  <params>
-  <engine-reheat-select>/controls/engines/engine[0]/augmentation</engine-reheat-select>
+  <engine-throttle-control>/autopilot/FCS/targets/engines/engine[0]/target-throttle-norm</engine-throttle-control>
+  <engine-throttle-display>/engines/engine[0]/throttle-norm</engine-throttle-display>
  </params>
 
  <layers>
@@ -52,16 +26,16 @@ Hacked to create a single reheat quadrant.
    <h>80</h>
   </layer>
 
-<!-- reheat -->
+<!-- throttle -->
 
   <layer>
-   <name>reheat handle </name>
+   <name>throttle handle </name>
    <texture>
     <path>Aircraft/Instruments/Textures/handles.rgb</path>
     <x1>0.0</x1>
     <x2>0.37890625</x2>
-    <y1>0.73828125</y1>
-    <y2>0.86328125</y2>
+    <y1>0.875</y1>
+    <y2>1.0</y2>
    </texture>
    <w>20</w>
    <h>30</h>
@@ -72,7 +46,7 @@ Hacked to create a single reheat quadrant.
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <property alias="../../../../../params/engine-reheat-select"/>
+     <property alias="../../../../../params/engine-throttle-display"/>
      <min>0.0</min>
      <max>1.0</max>
      <scale>40</scale>
@@ -85,7 +59,7 @@ Hacked to create a single reheat quadrant.
 
  <actions>
 
-<!-- reheat -->
+<!-- throttle -->
   <action>
    <name>small decrease</name>
    <button>0</button>
@@ -95,7 +69,7 @@ Hacked to create a single reheat quadrant.
    <h>16</h>
    <binding>
     <command>property-adjust</command>
-    <property alias="../../../../params/engine-reheat-select"/>
+    <property alias="../../../../params/engine-throttle-control"/>
     <step>-0.01</step>
     <min>0</min>
     <max>1.0</max>
@@ -112,7 +86,7 @@ Hacked to create a single reheat quadrant.
    <h>16</h>
    <binding>
     <command>property-adjust</command>
-    <property alias="../../../../params/engine-reheat-select"/>
+    <property alias="../../../../params/engine-throttle-control"/>
     <step>0.01</step>
     <min>0</min>
     <max>1.0</max>
@@ -129,7 +103,7 @@ Hacked to create a single reheat quadrant.
    <h>16</h>
    <binding>
     <command>property-adjust</command>
-    <property alias="../../../../params/engine-reheat-select"/>
+    <property alias="../../../../params/engine-throttle-control"/>
     <step>-0.1</step>
     <min>0</min>
     <max>1.0</max>
@@ -146,7 +120,7 @@ Hacked to create a single reheat quadrant.
    <h>16</h>
    <binding>
     <command>property-adjust</command>
-    <property alias="../../../../params/engine-reheat-select"/>
+    <property alias="../../../../params/engine-throttle-control"/>
     <step>0.1</step>
     <min>0</min>
     <max>1.0</max>

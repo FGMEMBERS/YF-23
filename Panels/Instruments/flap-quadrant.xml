@@ -1,33 +1,5 @@
 <?xml version="1.0"?>
 
-<!--
-Throttle qquadrant.
-
-December 2001 by John Check, j4strngs@rockfish.net
-
-This is an instrument configuration file for the open-source flight
-simulator FlightGear (www.flightgear.org).  The file is an XML-encoded
-FlightGear property list defining the instrument's layers and actions.
-
-Each instrument is composed of layers stacked on top of each other.
-A layer may be a texture (with transparent parts to show the layers
-underneath), text, or a special layer that switches between two
-others (say, to turn an indicator light on or off).  Each layer can
-move independently in proportion to a property value, and text
-can be generated from property values as well: all of the layer's
-movements are defined as transformations.
-
-Actions are hotspots on the instrument that will respond to a mouse
-click.  Actions always modify the values of properties, either by
-adjusting them, toggling them, or swaping them with other
-properties' values.
-
-Hacked to create a three step flap quadrant - the flaps are
-extended/retracted in three steps.
-
-2003/01 Lee Elliott
--->
-
 <PropertyList>
 
  <name>flap quadrant</name>
@@ -97,7 +69,7 @@ extended/retracted in three steps.
    <binding>
     <command>property-adjust</command>
     <property alias="../../../../params/flaps-select"/>
-    <step>-0.20</step>
+    <step>-0.25</step>
     <min>0</min>
     <max>1.0</max>
     <wrap>false</wrap>
@@ -114,7 +86,7 @@ extended/retracted in three steps.
    <binding>
     <command>property-adjust</command>
     <property alias="../../../../params/flaps-select"/>
-    <step>0.20</step>
+    <step>0.25</step>
     <min>0</min>
     <max>1.0</max>
     <wrap>false</wrap>
