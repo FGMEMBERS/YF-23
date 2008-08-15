@@ -170,7 +170,7 @@ NR/MD YF23 simulation config.
     <target-agl-ft type="float">800</target-agl-ft>
     <target-altitude-ft type="float">3000</target-altitude-ft>
     <target-aoa-deg type="float">11</target-aoa-deg>
-    <target-pitch-deg type="float">12</target-pitch-deg>]
+    <target-pitch-deg type="float">12</target-pitch-deg>
     <take-off-pitch-deg type="float">13</take-off-pitch-deg>
     <initial-climb-pitch-deg type="float">11</initial-climb-pitch-deg>
     <ground-roll-heading-deg type="float">-999.9</ground-roll-heading-deg>
