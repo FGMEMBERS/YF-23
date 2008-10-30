@@ -24,7 +24,7 @@
   <enable_energy_marker>true</enable_energy_marker>
   <enable_climb_dive_marker>false</enable_climb_dive_marker>
   <enable_glide_slope_marker>true</enable_glide_slope_marker>
-  <glide_slope>0.0</glide_slope>
+  <glide_slope>-3.5</glide_slope>
   <enable_waypoint_marker>true</enable_waypoint_marker>
   <working>true</working>
   </l1>
