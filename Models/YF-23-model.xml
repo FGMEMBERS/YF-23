@@ -1,0 +1,596 @@
+<?xml version="1.0"?>
+
+<!-- YF23 model config file - Lee Elliott -->
+
+<PropertyList>
+
+  <path>YF23-006-008g11.ac</path>
+  <offsets>
+    <z-m>0.0</z-m>
+    <pitch-deg>0</pitch-deg>
+  </offsets>
+
+<!-- De-select pilot when in view 0 -->
+  <animation>
+    <type>select</type>
+    <object-name>CPT-Pilot-Head</object-name>
+    <object-name>CPT-Pilot-Body</object-name>
+    <object-name>CPT-Helmet</object-name>
+    <object-name>CPT-Visor</object-name>
+    <object-name>CPT-Facemask</object-name>
+    <condition>
+      <not>
+        <equals>
+          <property>sim/current-view/view-number</property>
+          <value>0</value>
+        </equals>
+      </not>
+    </condition>
+  </animation>
+
+<!-- Canopy -->
+  <animation>
+    <type>rotate</type>
+    <object-name>CPT-Canopy-R-Surround</object-name>
+    <object-name>CPT-Canopy-R-Glass</object-name>
+    <property>canopy/position-norm</property>
+    <factor>70.0</factor>
+    <center>
+      <x-m>-4.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>1.05</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- Pilot Head -->
+  <animation>
+    <type>rotate</type>
+    <object-name>CPT-Pilot-Head</object-name>
+    <object-name>CPT-Helmet</object-name>
+    <object-name>CPT-Visor</object-name>
+    <object-name>CPT-Facemask</object-name>
+    <property>gear/gear/steering-norm</property>
+    <offset-deg>0</offset-deg>
+    <factor>-45</factor>
+    <center>
+      <x-m>-5.69</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.90</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+<!-- Left ruddervator -->
+  <animation>
+    <type>rotate</type>
+    <object-name>ELEV-L-Stabilator-Is</object-name>
+    <object-name>ELEV-L-Stabilator-Os</object-name>
+    <object-name>ELEV-L-Stabilator-Caps</object-name>
+    <property>surface-positions/ruddervator-left-pos-norm</property>
+    <factor>-10</factor>
+    <center>
+      <x-m>8.00</x-m>
+      <y-m>-2.57</y-m>
+      <z-m>0.22</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>-1.0</y>
+      <z>0.8</z>
+    </axis>
+  </animation>
+
+<!-- Right ruddervator -->
+  <animation>
+    <type>rotate</type>
+    <object-name>ELEV-R-Stabilator-Is</object-name>
+    <object-name>ELEV-R-Stabilator-Os</object-name>
+    <object-name>ELEV-R-Stabilator-Caps</object-name>
+    <property>surface-positions/ruddervator-right-pos-norm</property>
+    <factor>10</factor>
+    <center>
+      <x-m>8.00</x-m>
+      <y-m>2.57</y-m>
+      <z-m>0.22</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.8</z>
+    </axis>
+  </animation>
+
+<!-- Left Aileron -->
+  <animation>
+    <type>rotate</type>
+    <object-name>WING-L-Aileron-Top</object-name>
+    <object-name>WING-L-Aileron-Bottom</object-name>
+    <object-name>WING-L-Aileron-Caps</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor>-30</factor>
+    <center>
+      <x-m>3.79</x-m>
+      <y-m>-4.20</y-m>
+      <z-m>-0.02</z-m>
+    </center>
+    <axis>
+      <x>-0.9</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- Right Aileron -->
+  <animation>
+    <type>rotate</type>
+    <object-name>WING-R-Aileron-Top</object-name>
+    <object-name>WING-R-Aileron-Bottom</object-name>
+    <object-name>WING-R-Aileron-Caps</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor>-30</factor>
+    <center>
+      <x-m>3.79</x-m>
+      <y-m>4.20</y-m>
+      <z-m>0.02</z-m>
+    </center>
+    <axis>
+      <x>0.9</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- Left Flap -->
+  <animation>
+    <type>rotate</type>
+    <object-name>WING-L-Flap-Top</object-name>
+    <object-name>WING-L-Flap-Bottom</object-name>
+    <object-name>WING-L-Flap-Caps</object-name>
+    <property>surface-positions/left-flap-pos-norm</property>
+    <factor>-30</factor>
+    <center>
+      <x-m>4.89</x-m>
+      <y-m>-2.37</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis>
+      <x>-0.92</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- Right Flap -->
+  <animation>
+    <type>rotate</type>
+    <object-name>WING-R-Flap-Top</object-name>
+    <object-name>WING-R-Flap-Bottom</object-name>
+    <object-name>WING-R-Flap-Caps</object-name>
+    <property>surface-positions/right-flap-pos-norm</property>
+    <factor>-30</factor>
+    <center>
+      <x-m>4.89</x-m>
+      <y-m>2.37</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis>
+      <x>0.92</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- Left LE -->
+  <animation>
+    <type>rotate</type>
+    <object-name>WING-L-Slat-Top</object-name>
+    <object-name>WING-L-Slat-Bottom</object-name>
+    <object-name>WING-L-Slat-Caps</object-name>
+    <property>surface-positions/left-slat-pos-norm</property>
+    <factor>-25</factor>
+    <center>
+      <x-m>-1.0</x-m>
+      <y-m>-3.0</y-m>
+      <z-m>0.08</z-m>
+    </center>
+    <axis>
+      <x>-0.85</x>
+      <y>1</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Right LE -->
+  <animation>
+    <type>rotate</type>
+    <object-name>WING-R-Slat-Top</object-name>
+    <object-name>WING-R-Slat-Bottom</object-name>
+    <object-name>WING-R-Slat-Caps</object-name>
+    <property>surface-positions/right-slat-pos-norm</property>
+    <factor>-25</factor>
+    <center>
+      <x-m>-1.0</x-m>
+      <y-m>3.0</y-m>
+      <z-m>0.08</z-m>
+    </center>
+    <axis>
+      <x>0.85</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- Undercarriage -->
+<!-- Chrome animation, courtesy of Vivian  -->
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>chrome2.png</texture>
+    <object-name>UC-F-Lower-LegT</object-name>
+    <object-name>UC-L-Lower-Leg</object-name>
+    <object-name>UC-R-Lower-Leg</object-name>
+  </animation>
+
+<!-- Front u/c -->
+<!-- De-select when retracted -->
+  <animation>
+    <type>select</type>
+    <object-name>UC-F-Upper-Leg</object-name>
+    <object-name>UC-F-Lower-LegT</object-name>
+    <object-name>UC-F-Lower-LegB</object-name>
+    <object-name>UC-F-F-Strut</object-name>
+    <object-name>UC-F-Tyre</object-name>
+    <object-name>UC-F-Hub</object-name>
+    <object-name>UC-F-Door-IS</object-name>
+    <condition>
+      <not>
+        <equals>
+          <property>gear/gear[0]/position-norm</property>
+          <value>0</value>
+        </equals>
+      </not>
+    </condition>
+  </animation>
+
+<!-- Extend/Retract Gear -->
+  <animation>
+    <type>rotate</type>
+    <object-name>UC-F-Upper-Leg</object-name>
+    <object-name>UC-F-Lower-LegT</object-name>
+    <object-name>UC-F-Lower-LegB</object-name>
+    <object-name>UC-F-F-Strut</object-name>
+    <object-name>UC-F-Tyre</object-name>
+    <object-name>UC-F-Hub</object-name>
+    <property>gear/gear[0]/position-norm</property>
+    <factor>-210</factor>
+    <offset-deg>220</offset-deg>
+    <min-deg>0</min-deg>
+    <max-deg>105</max-deg>
+    <center>
+      <x-m>-5.2</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-0.4</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- Open/Close Door -->
+  <animation>
+    <type>rotate</type>
+    <object-name>UC-F-Door-OS</object-name>
+    <object-name>UC-F-Door-IS</object-name>
+    <property>gear/gear/position-norm</property>
+    <factor>180</factor>
+    <offset-deg>0</offset-deg>
+    <min-deg>0</min-deg>
+    <max-deg>90</max-deg>
+    <center>
+      <x-m>5.9</x-m>
+      <y-m>0.258</y-m>
+      <z-m>-0.572</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- Steering -->
+  <animation>
+    <type>rotate</type>
+    <object-name>UC-F-Lower-LegT</object-name>
+    <object-name>UC-F-Lower-LegB</object-name>
+    <object-name>UC-F-Tyre</object-name>
+    <object-name>UC-F-Hub</object-name>
+    <property>gear/gear/steering-norm</property>
+    <offset-deg>0</offset-deg>
+    <factor>-45</factor>
+    <center>
+      <x-m>-5.2</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-1.1</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+<!-- Compression -->
+  <animation>
+    <type>translate</type>
+    <object-name>UC-F-Lower-LegT</object-name>
+    <object-name>UC-F-Lower-LegB</object-name>
+    <object-name>UC-F-Tyre</object-name>
+    <object-name>UC-F-Hub</object-name>
+    <property>gear/gear/compression-norm</property>
+    <factor>0.5</factor>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+<!-- Left u/c -->
+<!-- De-select when retracted -->
+  <animation>
+    <type>select</type>
+    <object-name>UC-L-Upper-Leg</object-name>
+    <object-name>UC-L-Lower-Leg</object-name>
+    <object-name>UC-L-Strut</object-name>
+    <object-name>UC-L-Tyre</object-name>
+    <object-name>UC-L-Hub</object-name>
+    <object-name>UC-L-Arm</object-name>
+    <object-name>UC-L-Door-IS</object-name>
+    <condition>
+      <not>
+        <equals>
+          <property>gear/gear[1]/position-norm</property>
+          <value>0</value>
+        </equals>
+      </not>
+    </condition>
+  </animation>
+
+<!-- Extend/Retract Gear -->
+  <animation>
+    <type>rotate</type>
+    <object-name>UC-L-Upper-Leg</object-name>
+    <object-name>UC-L-Lower-Leg</object-name>
+    <object-name>UC-L-Strut</object-name>
+    <object-name>UC-L-Tyre</object-name>
+    <object-name>UC-L-Hub</object-name>
+    <object-name>UC-L-Arm</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <factor>193</factor>
+    <offset-deg>-193</offset-deg>
+    <min-deg>-98</min-deg>
+    <max-deg>0</max-deg>
+    <center>
+      <x-m>1.6</x-m>
+      <y-m>-1.9</y-m>
+      <z-m>-0.60</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- Compression -->
+  <animation>
+    <type>translate</type>
+    <object-name>UC-L-Lower-Leg</object-name>
+    <object-name>UC-L-Arm</object-name>
+    <object-name>UC-L-Hub</object-name>
+    <object-name>UC-L-Tyre</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <factor>0.2</factor>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>UC-L-Arm</object-name>
+    <object-name>UC-L-Hub</object-name>
+    <object-name>UC-L-Tyre</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <offset-deg>10</offset-deg>
+    <factor>-95</factor>
+    <center>
+      <x-m>1.6</x-m>
+      <y-m>-1.9</y-m>
+      <z-m>-1.5</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>UC-L-Strut</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <offset-deg>-5</offset-deg>
+    <factor>95</factor>
+    <center>
+      <x-m>1.48</x-m>
+      <y-m>-1.9</y-m>
+      <z-m>-1.15</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- Open/Close Door -->
+  <animation>
+    <type>rotate</type>
+    <object-name>UC-L-Door-OS</object-name>
+    <object-name>UC-L-Door-IS</object-name>
+    <property>gear/gear/position-norm</property>
+    <factor>-140</factor>
+    <offset-deg>0</offset-deg>
+    <min-deg>-70</min-deg>
+    <max-deg>0</max-deg>
+    <center>
+      <x-m>1.6</x-m>
+      <y-m>-2.26</y-m>
+      <z-m>-0.54</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0.1</y>
+      <z>0.1</z>
+    </axis>
+  </animation>
+
+<!-- Right u/c -->
+<!-- De-select when retracted -->
+  <animation>
+    <type>select</type>
+    <object-name>UC-R-Upper-Leg</object-name>
+    <object-name>UC-R-Lower-Leg</object-name>
+    <object-name>UC-R-Strut</object-name>
+    <object-name>UC-R-Tyre</object-name>
+    <object-name>UC-R-Hub</object-name>
+    <object-name>UC-R-Arm</object-name>
+    <object-name>UC-R-Door-IS</object-name>
+    <condition>
+      <not>
+        <equals>
+          <property>gear/gear[2]/position-norm</property>
+          <value>0</value>
+        </equals>
+      </not>
+    </condition>
+  </animation>
+
+<!-- Extend/Retract Gear -->
+  <animation>
+    <type>rotate</type>
+    <object-name>UC-R-Upper-Leg</object-name>
+    <object-name>UC-R-Lower-Leg</object-name>
+    <object-name>UC-R-Strut</object-name>
+    <object-name>UC-R-Tyre</object-name>
+    <object-name>UC-R-Hub</object-name>
+    <object-name>UC-R-Arm</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <factor>193</factor>
+    <offset-deg>-193</offset-deg>
+    <min-deg>-98</min-deg>
+    <max-deg>0</max-deg>
+    <center>
+      <x-m>1.6</x-m>
+      <y-m>1.9</y-m>
+      <z-m>-0.60</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- Compression -->
+  <animation>
+    <type>translate</type>
+    <object-name>UC-R-Lower-Leg</object-name>
+    <object-name>UC-R-Arm</object-name>
+    <object-name>UC-R-Hub</object-name>
+    <object-name>UC-R-Tyre</object-name>
+    <property>gear/gear[2]/compression-norm</property>
+    <factor>0.2</factor>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>UC-R-Arm</object-name>
+    <object-name>UC-R-Hub</object-name>
+    <object-name>UC-R-Tyre</object-name>
+    <property>gear/gear[2]/compression-norm</property>
+    <offset-deg>10</offset-deg>
+    <factor>-95</factor>
+    <center>
+      <x-m>1.6</x-m>
+      <y-m>1.9</y-m>
+      <z-m>-1.5</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>UC-R-Strut</object-name>
+    <property>gear/gear[2]/compression-norm</property>
+    <offset-deg>-5</offset-deg>
+    <factor>95</factor>
+    <center>
+      <x-m>1.48</x-m>
+      <y-m>1.9</y-m>
+      <z-m>-1.15</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- Open/Close Door -->
+  <animation>
+    <type>rotate</type>
+    <object-name>UC-R-Door-OS</object-name>
+    <object-name>UC-R-Door-IS</object-name>
+    <property>gear/gear/position-norm</property>
+    <factor>140</factor>
+    <offset-deg>0</offset-deg>
+    <min-deg>0</min-deg>
+    <max-deg>70</max-deg>
+    <center>
+      <x-m>1.6</x-m>
+      <y-m>2.26</y-m>
+      <z-m>-0.54</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>-0.1</y>
+      <z>0.1</z>
+    </axis>
+  </animation>
+
+</PropertyList>

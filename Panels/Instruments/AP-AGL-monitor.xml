@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <name>AGL monitor</name>
+  <w-base>128</w-base>
+  <h-base>192</h-base>
+
+  <layers>
+
+    <layer>
+      <name>gauge face</name>
+      <texture>
+        <path>Aircraft/YF-23/Panels/Instruments/Textures/trans-dgrey-bg.rgb</path>
+        <x1>0.0</x1>
+        <x2>1.0</x2>
+        <y1>0.0</y1>
+        <y2>1.0</y2>
+      </texture>
+      <w>128</w>
+      <h>192</h>
+    </layer>
+
+    <layer>
+      <name>AGL Title</name>
+      <type>text</type>
+      <point-size>18</point-size>
+      <color>
+        <red>1.0</red>
+        <green>1.0</green>
+        <blue>1.0</blue>
+      </color>
+      <chunks>
+        <chunk>
+          <type>literal</type>
+          <text>AGL:______</text>
+        </chunk>
+      </chunks>
+      <transformations>
+        <transformation>
+          <type>x-shift</type>
+          <offset>-60</offset>
+        </transformation>
+        <transformation>
+          <type>y-shift</type>
+          <offset>-1</offset>
+        </transformation>
+      </transformations>
+    </layer>
+
+    <layer>
+      <name>0 ft agl grad</name>
+      <type>text</type>
+      <point-size>18</point-size>
+      <color>
+        <red>1.0</red>
+        <green>1.0</green>
+        <blue>1.0</blue>
+      </color>
+      <chunks>
+        <chunk>
+          <type>literal</type>
+          <text>_    _</text>
+        </chunk>
+      </chunks>
+      <transformations>
+        <transformation>
+          <type>x-shift</type>
+          <offset>-8</offset>
+        </transformation>
+        <transformation>
+          <type>y-shift</type>
+          <property>/autopilot/settings/target-agl-ft</property>
+          <min>-800</min>
+          <max>800</max>
+          <scale>-0.15</scale>
+          <offset>0</offset>
+        </transformation>
+      </transformations>
+    </layer>
+
+    <layer>
+      <name>0.5 agl ft grad</name>
+      <type>text</type>
+      <point-size>18</point-size>
+      <color>
+        <red>1.0</red>
+        <green>1.0</green>
+        <blue>1.0</blue>
+      </color>
+      <chunks>
+        <chunk>
+          <type>literal</type>
+          <text>_    _</text>
+        </chunk>
+      </chunks>
+      <transformations>
+        <transformation>
+          <type>x-shift</type>
+          <offset>-8</offset>
+        </transformation>
+        <transformation>
+          <type>y-shift</type>
+          <property>/autopilot/settings/target-agl-ft</property>
+          <min>-800</min>
+          <max>800</max>
+          <scale>-0.075</scale>
+          <offset>0</offset>
+        </transformation>
+      </transformations>
+    </layer>
+
+    <layer>
+      <name>1.5x agl ft grad</name>
+      <type>text</type>
+      <point-size>18</point-size>
+      <color>
+        <red>1.0</red>
+        <green>1.0</green>
+        <blue>1.0</blue>
+      </color>
+      <chunks>
+        <chunk>
+          <type>literal</type>
+          <text>_    _</text>
+        </chunk>
+      </chunks>
+      <transformations>
+        <transformation>
+          <type>x-shift</type>
+          <offset>-8</offset>
+        </transformation>
+        <transformation>
+          <type>y-shift</type>
+          <property>/autopilot/settings/target-agl-ft</property>
+          <min>-800</min>
+          <max>800</max>
+          <scale>0.075</scale>
+          <offset>0</offset>
+        </transformation>
+      </transformations>
+    </layer>
+
+    <layer>
+      <name>2x agl ft grad</name>
+      <type>text</type>
+      <point-size>18</point-size>
+      <color>
+        <red>1.0</red>
+        <green>1.0</green>
+        <blue>1.0</blue>
+      </color>
+      <chunks>
+        <chunk>
+          <type>literal</type>
+          <text>_    _</text>
+        </chunk>
+      </chunks>
+      <transformations>
+        <transformation>
+          <type>x-shift</type>
+          <offset>-8</offset>
+        </transformation>
+        <transformation>
+          <type>y-shift</type>
+          <property>/autopilot/settings/target-agl-ft</property>
+          <min>-800</min>
+          <max>800</max>
+          <scale>0.15</scale>
+          <offset>0</offset>
+        </transformation>
+      </transformations>
+    </layer>
+
+    <layer>
+      <name>3x agl ft grad</name>
+      <type>text</type>
+      <point-size>18</point-size>
+      <color>
+        <red>1.0</red>
+        <green>1.0</green>
+        <blue>1.0</blue>
+      </color>
+      <chunks>
+        <chunk>
+          <type>literal</type>
+          <text>_    _</text>
+        </chunk>
+      </chunks>
+      <transformations>
+        <transformation>
+          <type>x-shift</type>
+          <offset>-8</offset>
+        </transformation>
+        <transformation>
+          <type>y-shift</type>
+          <property>/autopilot/settings/target-agl-ft</property>
+          <min>-800</min>
+          <max>800</max>
+          <scale>0.225</scale>
+          <offset>0</offset>
+        </transformation>
+      </transformations>
+    </layer>
+
+    <layer>
+      <name>4x agl ft grad</name>
+      <type>text</type>
+      <point-size>18</point-size>
+      <color>
+        <red>1.0</red>
+        <green>1.0</green>
+        <blue>1.0</blue>
+      </color>
+      <chunks>
+        <chunk>
+          <type>literal</type>
+          <text>_    _</text>
+        </chunk>
+      </chunks>
+      <transformations>
+        <transformation>
+          <type>x-shift</type>
+          <offset>-8</offset>
+        </transformation>
+        <transformation>
+          <type>y-shift</type>
+          <property>/autopilot/settings/target-agl-ft</property>
+          <min>-800</min>
+          <max>800</max>
+          <scale>0.3</scale>
+          <offset>0</offset>
+        </transformation>
+      </transformations>
+    </layer>
+
+    <layer>
+      <name>AGL</name>
+      <texture>
+        <path>Aircraft/YF-23/Panels/Instruments/Textures/needles-LE000.rgb</path>
+        <x1>0.0</x1>
+        <x2>0.1</x2>
+        <y1>0.0</y1>
+        <y2>0.5</y2>
+      </texture>
+      <w>24</w>
+      <h>44</h>
+      <transformations>
+        <transformation>
+          <type>y-shift</type>
+          <property>/position/altitude-agl-ft</property>
+          <min>-800</min>
+          <max>800</max>
+          <scale>0.15</scale>
+          <offset>0</offset>
+        </transformation>
+        <transformation>
+          <type>y-shift</type>
+          <property>/autopilot/settings/target-agl-ft</property>
+          <min>-800</min>
+          <max>800</max>
+          <scale>-0.15</scale>
+          <offset>0</offset>
+        </transformation>
+        <transformation>
+          <type>x-shift</type>
+          <offset>21</offset>
+        </transformation>
+        <transformation>
+          <type>y-shift</type>
+          <offset>-3</offset>
+        </transformation>
+        <transformation>
+          <type>rotation</type>
+          <offset>90</offset>
+        </transformation>
+      </transformations>
+    </layer>
+
+   </layers>
+
+</PropertyList>
