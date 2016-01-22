@@ -18,7 +18,8 @@ NR/MD YF23 simulation config.
   <description>Northrop/McDonnell Douglas YF-23 ATF prototype (YASim FDM)</description>
 
   <virtual-cockpit archive="y">false</virtual-cockpit>
-
+  <variant-of>YF-23</variant-of>
+  
   <view n="0">
    <internal archive="y">false</internal>
    <config>
